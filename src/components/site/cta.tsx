@@ -25,7 +25,10 @@ export const ctaVariants = cva(
   },
 );
 
-type CtaProps = VariantProps<typeof ctaVariants> & { className?: string; children: ReactNode };
+type CtaProps = VariantProps<typeof ctaVariants> & {
+  className?: string | undefined;
+  children: ReactNode;
+};
 
 export function CtaLink({
   variant,

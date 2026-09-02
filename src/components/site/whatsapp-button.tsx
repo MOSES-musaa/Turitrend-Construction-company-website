@@ -15,8 +15,8 @@ export function WhatsAppCta({
 }: {
   message: string;
   label?: string;
-  context?: string;
-  className?: string;
+  context?: string | undefined;
+  className?: string | undefined;
 } & VariantProps<typeof ctaVariants>) {
   return (
     <CtaAnchor
