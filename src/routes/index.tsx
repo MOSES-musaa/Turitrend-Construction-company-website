@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import heroImage from "@/assets/hero-architecture.jpg";
+import heroConstruction from "@/assets/hero-construction.jpg";
 import blueprint from "@/assets/blueprint-lines.jpg";
 import { CtaLink } from "@/components/site/cta";
 import { CtaBand } from "@/components/site/cta-band";
@@ -42,14 +44,7 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-ink text-ink-foreground">
-        <img
-          src={heroImage}
-          alt="Abstract architectural line drawing over a dark concrete surface"
-          width={1920}
-          height={1280}
-          fetchPriority="high"
-          className="absolute inset-0 size-full object-cover opacity-45"
-        />
+        <HeroCarousel />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/30" />
         <div className="container-x relative grid gap-12 pt-16 pb-16 md:min-h-[82vh] md:grid-cols-12 md:content-center md:pt-24 md:pb-24">
           <div className="md:col-span-8">
@@ -285,5 +280,109 @@ function Home() {
 
       <CtaBand />
     </>
+  );
+}
+
+const heroSlides = [
+  {
+    src: heroImage,
+    alt: "Abstract architectural line drawing over a dark concrete surface",
+    caption: "Building & civil works",
+  },
+  {
+    src: heroConstruction,
+    alt: "A building under construction at dusk, scaffolding and crane silhouetted",
+    caption: "Groundworks to finishes",
+  },
+  {
+    src: blueprint,
+    alt: "Technical isometric line drawing of a timber roof structure",
+    caption: "Planned before it is built",
+  },
+];
+
+function HeroCarousel() {
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const timer = useRef<number | null>(null);
+
+  const go = useCallback(
+    (next: number) => setIndex((next + heroSlides.length) % heroSlides.length),
+    [],
+  );
+
+  useEffect(() => {
+    if (paused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    timer.current = window.setInterval(() => {
+      setIndex((i) => (i + 1) % heroSlides.length);
+    }, 6000);
+    return () => {
+      if (timer.current) window.clearInterval(timer.current);
+    };
+  }, [paused]);
+
+  return (
+    <div
+      className="absolute inset-0"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Turiend Construction highlights"
+    >
+      {heroSlides.map((slide, i) => (
+        <img
+          key={slide.src}
+          src={slide.src}
+          alt={i === index ? slide.alt : ""}
+          width={1920}
+          height={1280}
+          fetchPriority={i === 0 ? "high" : "auto"}
+          loading={i === 0 ? "eager" : "lazy"}
+          aria-hidden={i !== index}
+          className={`absolute inset-0 size-full object-cover transition-opacity duration-1000 ${
+            i === index ? "opacity-45" : "opacity-0"
+          }`}
+        />
+      ))}
+      <div className="absolute right-4 bottom-4 z-10 flex items-center gap-3 md:right-8 md:bottom-8">
+        <span className="label-tech hidden text-ink-muted md:block" aria-live="polite">
+          {heroSlides[index]!.caption}
+        </span>
+        <div className="flex gap-1.5" role="tablist" aria-label="Hero slides">
+          {heroSlides.map((slide, i) => (
+            <button
+              key={slide.src}
+              type="button"
+              role="tab"
+              aria-selected={i === index}
+              aria-label={`Slide ${i + 1}: ${slide.caption}`}
+              onClick={() => go(i)}
+              className={`h-1 transition-all duration-300 ${
+                i === index ? "w-8 bg-accent" : "w-4 bg-ink-foreground/30 hover:bg-ink-foreground/60"
+              }`}
+            />
+          ))}
+        </div>
+        <div className="flex gap-1">
+          <button
+            type="button"
+            onClick={() => go(index - 1)}
+            aria-label="Previous slide"
+            className="flex size-9 items-center justify-center border border-ink-line text-ink-foreground transition-colors hover:bg-ink-foreground hover:text-ink"
+          >
+            <ArrowLeft className="size-4" aria-hidden="true" />
+          </button>
+          <button
+            type="button"
+            onClick={() => go(index + 1)}
+            aria-label="Next slide"
+            className="flex size-9 items-center justify-center border border-ink-line text-ink-foreground transition-colors hover:bg-ink-foreground hover:text-ink"
+          >
+            <ArrowRight className="size-4" aria-hidden="true" />
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
