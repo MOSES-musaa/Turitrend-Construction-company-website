@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import heroImage from "@/assets/hero-architecture.jpg";
+import heroConstruction from "@/assets/hero-construction.jpg";
 import blueprint from "@/assets/blueprint-lines.jpg";
 import { CtaLink } from "@/components/site/cta";
 import { CtaBand } from "@/components/site/cta-band";
