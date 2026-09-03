@@ -44,14 +44,7 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-ink text-ink-foreground">
-        <img
-          src={heroImage}
-          alt="Abstract architectural line drawing over a dark concrete surface"
-          width={1920}
-          height={1280}
-          fetchPriority="high"
-          className="absolute inset-0 size-full object-cover opacity-45"
-        />
+        <HeroCarousel />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/30" />
         <div className="container-x relative grid gap-12 pt-16 pb-16 md:min-h-[82vh] md:grid-cols-12 md:content-center md:pt-24 md:pb-24">
           <div className="md:col-span-8">
