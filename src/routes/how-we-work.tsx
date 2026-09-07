@@ -5,6 +5,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { SectionHeading } from "@/components/site/section-heading";
 import { processSteps } from "@/lib/company";
+import { processImage } from "@/lib/placeholders";
 
 export const Route = createFileRoute("/how-we-work")({
   head: () => ({
@@ -96,6 +97,19 @@ function HowWeWork() {
           </div>
           <Reveal className="md:col-span-4">
             <div className="sticky top-28">
+              <div className="relative mb-6 overflow-hidden">
+                <img
+                  src={processImage.src}
+                  alt={processImage.alt}
+                  width={1400}
+                  height={1000}
+                  loading="lazy"
+                  className="aspect-4/3 w-full object-cover"
+                />
+                <span className="label-tech absolute right-3 bottom-3 bg-ink/85 px-2 py-1 text-ink-foreground">
+                  Illustrative image
+                </span>
+              </div>
               <img
                 src={blueprint}
                 alt="Isometric technical drawing of a building frame and roof structure"

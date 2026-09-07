@@ -3,6 +3,7 @@ import { CtaBand } from "@/components/site/cta-band";
 import { PageHero } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { SectionHeading } from "@/components/site/section-heading";
+import { projectPlaceholderImages } from "@/lib/placeholders";
 
 export const Route = createFileRoute("/insights")({
   head: () => ({
@@ -80,12 +81,27 @@ function Insights() {
             </Reveal>
             <ul className="mt-10 grid gap-px border border-line bg-line md:mt-14 md:grid-cols-2 lg:grid-cols-3">
               {planned.map((item, i) => (
-                <Reveal key={item.title} as="li" delay={i * 50} className="bg-background p-7">
+                <Reveal key={item.title} as="li" delay={i * 50} className="bg-background">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={projectPlaceholderImages[i % projectPlaceholderImages.length].src}
+                      alt=""
+                      width={1200}
+                      height={900}
+                      loading="lazy"
+                      className="aspect-16/9 w-full object-cover"
+                    />
+                    <span className="label-tech absolute right-3 bottom-3 bg-ink/85 px-2 py-1 text-ink-foreground">
+                      Illustrative image
+                    </span>
+                  </div>
+                  <div className="p-7">
                   <span className="label-tech text-accent">{item.category}</span>
                   <h2 className="mt-5 text-lg leading-snug font-semibold tracking-tight">
                     {item.title}
                   </h2>
                   <p className="label-tech mt-6 text-muted-foreground">In preparation</p>
+                  </div>
                 </Reveal>
               ))}
             </ul>
