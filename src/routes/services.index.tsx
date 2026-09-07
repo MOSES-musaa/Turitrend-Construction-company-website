@@ -4,6 +4,7 @@ import { CtaBand } from "@/components/site/cta-band";
 import { PageHero } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { services } from "@/lib/company";
+import { serviceImages } from "@/lib/placeholders";
 
 export const Route = createFileRoute("/services/")({
   head: () => ({
@@ -45,6 +46,19 @@ function ServicesIndex() {
                 className="group grid gap-6 p-7 transition-colors hover:bg-ink hover:text-ink-foreground md:grid-cols-12 md:gap-10 md:p-10"
               >
                 <div className="md:col-span-4">
+                  <div className="relative mb-6 overflow-hidden">
+                    <img
+                      src={serviceImages[service.slug].src}
+                      alt={serviceImages[service.slug].alt}
+                      width={1200}
+                      height={800}
+                      loading="lazy"
+                      className="aspect-3/2 w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                    />
+                    <span className="label-tech absolute right-3 bottom-3 bg-ink/85 px-2 py-1 text-ink-foreground">
+                      Illustrative image
+                    </span>
+                  </div>
                   <span className="label-tech text-accent">{service.number}</span>
                   <h2 className="display-3 mt-4">{service.title}</h2>
                 </div>

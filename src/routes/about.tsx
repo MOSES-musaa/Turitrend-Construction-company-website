@@ -5,6 +5,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { SectionHeading } from "@/components/site/section-heading";
 import { clientTypes, company, services, whyTuriend } from "@/lib/company";
+import { aboutImage } from "@/lib/placeholders";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -73,6 +74,22 @@ function About() {
               </div>
             }
           />
+        </Reveal>
+      </section>
+
+      <section className="container-x pb-12 md:pb-20">
+        <Reveal className="relative overflow-hidden">
+          <img
+            src={aboutImage.src}
+            alt={aboutImage.alt}
+            width={1600}
+            height={900}
+            loading="lazy"
+            className="aspect-16/7 w-full object-cover"
+          />
+          <span className="label-tech absolute right-4 bottom-4 bg-ink/85 px-3 py-2 text-ink-foreground">
+            Illustrative image
+          </span>
         </Reveal>
       </section>
 

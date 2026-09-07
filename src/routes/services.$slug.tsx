@@ -15,6 +15,7 @@ import { SectionHeading } from "@/components/site/section-heading";
 import { WhatsAppCta } from "@/components/site/whatsapp-button";
 import { serviceBySlug, services } from "@/lib/company";
 import { track } from "@/lib/analytics";
+import { serviceImages } from "@/lib/placeholders";
 
 export const Route = createFileRoute("/services/$slug")({
   loader: ({ params }) => {
@@ -73,6 +74,24 @@ function ServiceDetail() {
           />
         </div>
       </PageHero>
+
+      <section className="bg-ink">
+        <div className="container-x pb-8 md:pb-12">
+          <Reveal className="relative overflow-hidden border border-ink-line">
+            <img
+              src={serviceImages[service.slug].src}
+              alt={serviceImages[service.slug].alt}
+              width={1600}
+              height={900}
+              loading="lazy"
+              className="aspect-16/7 w-full object-cover"
+            />
+            <span className="label-tech absolute right-4 bottom-4 bg-ink/85 px-3 py-2 text-ink-foreground">
+              Illustrative image
+            </span>
+          </Reveal>
+        </div>
+      </section>
 
       <section className="container-x section-y">
         <Reveal>

@@ -6,6 +6,7 @@ import { Reveal } from "@/components/site/reveal";
 import { SectionHeading } from "@/components/site/section-heading";
 import { services } from "@/lib/company";
 import { cn } from "@/lib/utils";
+import { projectPlaceholderImages } from "@/lib/placeholders";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -92,17 +93,36 @@ function Projects() {
         </div>
 
         {visible.length === 0 ? (
-          <Reveal className="mt-10 grid-blueprint border border-line bg-card p-10 text-center md:p-20">
-            <p className="label-tech text-accent">Coming soon</p>
-            <h3 className="display-3 mx-auto mt-5 max-w-2xl">
-              No project entries are published yet.
-            </h3>
-            <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground">
-              We would rather show nothing than show work that is not ours. If you would like to
-              discuss comparable work we have carried out, ask us directly — we will talk you
-              through it and, where the client permits, arrange a site reference.
-            </p>
-          </Reveal>
+          <div className="mt-10">
+            <div className="grid gap-3 md:grid-cols-3">
+              {projectPlaceholderImages.map((image, i) => (
+                <Reveal key={image.src} delay={i * 60} className="relative overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    width={1200}
+                    height={900}
+                    loading="lazy"
+                    className="aspect-4/3 w-full object-cover"
+                  />
+                  <span className="label-tech absolute right-3 bottom-3 bg-ink/85 px-2 py-1 text-ink-foreground">
+                    Illustrative image
+                  </span>
+                </Reveal>
+              ))}
+            </div>
+            <Reveal className="grid-blueprint border border-line bg-card p-10 text-center md:p-16">
+              <p className="label-tech text-accent">Coming soon</p>
+              <h3 className="display-3 mx-auto mt-5 max-w-2xl">
+                No project entries are published yet.
+              </h3>
+              <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground">
+                The images above are illustrative placeholders, not Turiend projects. Genuine
+                project photography and documentation will replace them when approved for
+                publication. Ask us directly about comparable work in the meantime.
+              </p>
+            </Reveal>
+          </div>
         ) : (
           <div className="mt-10 grid gap-px border border-line bg-line md:grid-cols-2 lg:grid-cols-3">
             {visible.map((project) => (
