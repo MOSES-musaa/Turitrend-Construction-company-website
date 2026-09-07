@@ -76,7 +76,7 @@ function Insights() {
                 index="02"
                 eyebrow="In preparation"
                 title="The first articles are being written."
-                intro="We are not publishing filler. Each article below is being written by the team from real project experience, and will appear here once it is ready."
+                intro="We are not publishing filler. Each article below is being written by the team from real project experience, and will appear here once it is ready. The cover images are illustrative placeholders until Turiend photography is supplied."
               />
             </Reveal>
             <ul className="mt-10 grid gap-px border border-line bg-line md:mt-14 md:grid-cols-2 lg:grid-cols-3">
