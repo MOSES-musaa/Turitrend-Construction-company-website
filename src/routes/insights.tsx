@@ -84,7 +84,7 @@ function Insights() {
                 <Reveal key={item.title} as="li" delay={i * 50} className="bg-background">
                   <div className="relative overflow-hidden">
                     <img
-                      src={projectPlaceholderImages[i % projectPlaceholderImages.length].src}
+                      src={projectPlaceholderImages[i % projectPlaceholderImages.length]?.src ?? ""}
                       alt=""
                       width={1200}
                       height={900}
