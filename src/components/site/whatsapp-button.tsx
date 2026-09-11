@@ -1,9 +1,10 @@
 import { MessageCircle } from "lucide-react";
 import { whatsappLink } from "@/lib/company";
 import { track } from "@/lib/analytics";
-import { CtaAnchor, ctaVariants } from "./cta";
+import { CtaAnchor } from "./cta";
 import { cn } from "@/lib/utils";
 import type { VariantProps } from "class-variance-authority";
+import { ctaVariants } from "@/lib/cta-variants";
 
 export function WhatsAppCta({
   message,

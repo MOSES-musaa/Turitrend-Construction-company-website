@@ -19,7 +19,8 @@ export const Route = createFileRoute("/how-we-work")({
       { property: "og:title", content: "How We Work | Turiend Construction Limited" },
       {
         property: "og:description",
-        content: "The six steps a Turiend project moves through, from first conversation to handover.",
+        content:
+          "The six steps a Turiend project moves through, from first conversation to handover.",
       },
     ],
   }),

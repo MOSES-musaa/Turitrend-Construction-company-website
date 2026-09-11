@@ -17,6 +17,10 @@ import { Route as HowWeWorkRouteImport } from './routes/how-we-work'
 import { Route as InsightsRouteImport } from './routes/insights'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as QuoteRouteImport } from './routes/quote'
+import { Route as InsightsIndexRouteImport } from './routes/insights.index'
+import { Route as InsightsSlugRouteImport } from './routes/insights.$slug'
+import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
+import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 
@@ -60,6 +64,26 @@ const QuoteRoute = QuoteRouteImport.update({
   path: '/quote',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InsightsIndexRoute = InsightsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => InsightsRoute,
+} as any)
+const InsightsSlugRoute = InsightsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => InsightsRoute,
+} as any)
+const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ProjectsRoute,
+} as any)
+const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ProjectsRoute,
+} as any)
 const ServicesIndexRoute = ServicesIndexRouteImport.update({
   id: '/services/',
   path: '/services/',
@@ -77,10 +101,14 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/faqs': typeof FaqsRoute
   '/how-we-work': typeof HowWeWorkRoute
-  '/insights': typeof InsightsRoute
-  '/projects': typeof ProjectsRoute
+  '/insights': typeof InsightsRouteWithChildren
+  '/projects': typeof ProjectsRouteWithChildren
   '/quote': typeof QuoteRoute
+  '/insights/$slug': typeof InsightsSlugRoute
+  '/projects/$slug': typeof ProjectsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/insights/': typeof InsightsIndexRoute
+  '/projects/': typeof ProjectsIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
@@ -89,10 +117,12 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/faqs': typeof FaqsRoute
   '/how-we-work': typeof HowWeWorkRoute
-  '/insights': typeof InsightsRoute
-  '/projects': typeof ProjectsRoute
   '/quote': typeof QuoteRoute
+  '/insights/$slug': typeof InsightsSlugRoute
+  '/projects/$slug': typeof ProjectsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/insights': typeof InsightsIndexRoute
+  '/projects': typeof ProjectsIndexRoute
   '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
@@ -102,10 +132,14 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/faqs': typeof FaqsRoute
   '/how-we-work': typeof HowWeWorkRoute
-  '/insights': typeof InsightsRoute
-  '/projects': typeof ProjectsRoute
+  '/insights': typeof InsightsRouteWithChildren
+  '/projects': typeof ProjectsRouteWithChildren
   '/quote': typeof QuoteRoute
+  '/insights/$slug': typeof InsightsSlugRoute
+  '/projects/$slug': typeof ProjectsSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/insights/': typeof InsightsIndexRoute
+  '/projects/': typeof ProjectsIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
@@ -119,7 +153,11 @@ export interface FileRouteTypes {
     | '/insights'
     | '/projects'
     | '/quote'
+    | '/insights/$slug'
+    | '/projects/$slug'
     | '/services/$slug'
+    | '/insights/'
+    | '/projects/'
     | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -128,10 +166,12 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faqs'
     | '/how-we-work'
+    | '/quote'
+    | '/insights/$slug'
+    | '/projects/$slug'
+    | '/services/$slug'
     | '/insights'
     | '/projects'
-    | '/quote'
-    | '/services/$slug'
     | '/services'
   id:
     | '__root__'
@@ -143,7 +183,11 @@ export interface FileRouteTypes {
     | '/insights'
     | '/projects'
     | '/quote'
+    | '/insights/$slug'
+    | '/projects/$slug'
     | '/services/$slug'
+    | '/insights/'
+    | '/projects/'
     | '/services/'
   fileRoutesById: FileRoutesById
 }
@@ -153,8 +197,8 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   FaqsRoute: typeof FaqsRoute
   HowWeWorkRoute: typeof HowWeWorkRoute
-  InsightsRoute: typeof InsightsRoute
-  ProjectsRoute: typeof ProjectsRoute
+  InsightsRoute: typeof InsightsRouteWithChildren
+  ProjectsRoute: typeof ProjectsRouteWithChildren
   QuoteRoute: typeof QuoteRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
@@ -218,6 +262,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QuoteRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/insights/': {
+      id: '/insights/'
+      path: '/'
+      fullPath: '/insights/'
+      preLoaderRoute: typeof InsightsIndexRouteImport
+      parentRoute: typeof InsightsRoute
+    }
+    '/insights/$slug': {
+      id: '/insights/$slug'
+      path: '/$slug'
+      fullPath: '/insights/$slug'
+      preLoaderRoute: typeof InsightsSlugRouteImport
+      parentRoute: typeof InsightsRoute
+    }
+    '/projects/': {
+      id: '/projects/'
+      path: '/'
+      fullPath: '/projects/'
+      preLoaderRoute: typeof ProjectsIndexRouteImport
+      parentRoute: typeof ProjectsRoute
+    }
+    '/projects/$slug': {
+      id: '/projects/$slug'
+      path: '/$slug'
+      fullPath: '/projects/$slug'
+      preLoaderRoute: typeof ProjectsSlugRouteImport
+      parentRoute: typeof ProjectsRoute
+    }
     '/services/': {
       id: '/services/'
       path: '/services'
@@ -235,14 +307,42 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface InsightsRouteChildren {
+  InsightsSlugRoute: typeof InsightsSlugRoute
+  InsightsIndexRoute: typeof InsightsIndexRoute
+}
+
+const InsightsRouteChildren: InsightsRouteChildren = {
+  InsightsSlugRoute: InsightsSlugRoute,
+  InsightsIndexRoute: InsightsIndexRoute,
+}
+
+const InsightsRouteWithChildren = InsightsRoute._addFileChildren(
+  InsightsRouteChildren,
+)
+
+interface ProjectsRouteChildren {
+  ProjectsSlugRoute: typeof ProjectsSlugRoute
+  ProjectsIndexRoute: typeof ProjectsIndexRoute
+}
+
+const ProjectsRouteChildren: ProjectsRouteChildren = {
+  ProjectsSlugRoute: ProjectsSlugRoute,
+  ProjectsIndexRoute: ProjectsIndexRoute,
+}
+
+const ProjectsRouteWithChildren = ProjectsRoute._addFileChildren(
+  ProjectsRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   FaqsRoute: FaqsRoute,
   HowWeWorkRoute: HowWeWorkRoute,
-  InsightsRoute: InsightsRoute,
-  ProjectsRoute: ProjectsRoute,
+  InsightsRoute: InsightsRouteWithChildren,
+  ProjectsRoute: ProjectsRouteWithChildren,
   QuoteRoute: QuoteRoute,
   ServicesSlugRoute: ServicesSlugRoute,
   ServicesIndexRoute: ServicesIndexRoute,

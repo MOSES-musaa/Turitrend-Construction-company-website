@@ -1,17 +1,18 @@
 /**
+ * cspell:ignore Turitrend
  * Single source of factual company information.
- * Only details supplied by Turiend Construction Limited are stored here.
+ * Only details supplied by Turitrend Construction Limited are stored here.
  */
 
 export const company = {
-  name: "Turiend Construction Limited",
-  shortName: "Turiend",
+  name: "Turitrend Construction Limited",
+  shortName: "Turitrend",
   tagline: "From concept to creation",
   phone: "+254 727 233 041",
   phoneHref: "tel:+254727233041",
   whatsappNumber: "254727233041",
-  email: "turiendconstruction@gmail.com",
-  emailHref: "mailto:turiendconstruction@gmail.com",
+  email: "turitrendconstruction@gmail.com",
+  emailHref: "mailto:turitrendconstruction@gmail.com",
   location: "Nairobi, Kenya",
   postal: "P.O. Box 317 – 10106, Othaya",
 } as const;
@@ -21,7 +22,7 @@ export function whatsappLink(message: string) {
 }
 
 export const defaultWhatsappMessage =
-  "Hello Turiend, I would like to discuss a construction project.";
+  "Hello Turitrend, I would like to discuss a construction project.";
 
 export type ServiceSlug =
   | "home-improvements-renovations"
@@ -387,8 +388,7 @@ export const services: Service[] = [
     number: "06",
     title: "Project & Property Management",
     shortTitle: "Project & Property Management",
-    summary:
-      "Coordination, supervision and reporting for owners who cannot be on site every day.",
+    summary: "Coordination, supervision and reporting for owners who cannot be on site every day.",
     intro: [
       "Many clients are not able to be on site daily, and the cost of a project usually moves when nobody is checking progress, workmanship and spending as it happens.",
       "We take on that coordination role — on a construction project, or on a property that needs ongoing works and maintenance.",
@@ -421,8 +421,14 @@ export const services: Service[] = [
     ],
     approach: [
       { step: "Baseline", text: "We agree the scope, programme and what reporting you need." },
-      { step: "Supervision", text: "Work is checked on site against the agreed scope and quality." },
-      { step: "Reporting", text: "You are kept informed on progress and on decisions that are due." },
+      {
+        step: "Supervision",
+        text: "Work is checked on site against the agreed scope and quality.",
+      },
+      {
+        step: "Reporting",
+        text: "You are kept informed on progress and on decisions that are due.",
+      },
       { step: "Close-out", text: "Outstanding items are tracked to completion before sign-off." },
     ],
     faqs: [

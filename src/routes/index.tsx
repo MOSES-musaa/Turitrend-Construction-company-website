@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -9,6 +10,7 @@ import { CtaBand } from "@/components/site/cta-band";
 import { Reveal } from "@/components/site/reveal";
 import { SectionHeading } from "@/components/site/section-heading";
 import { WhatsAppCta } from "@/components/site/whatsapp-button";
+import { aboutImage } from "@/lib/placeholders";
 import {
   clientTypes,
   company,
@@ -45,7 +47,7 @@ function Home() {
       {/* HERO */}
       <section className="relative overflow-hidden bg-ink text-ink-foreground">
         <HeroCarousel />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/30" />
+        <div className="absolute inset-0 bg-linear-to-r from-ink via-ink/85 to-ink/30" />
         <div className="container-x relative grid gap-12 pt-16 pb-16 md:min-h-[82vh] md:grid-cols-12 md:content-center md:pt-24 md:pb-24">
           <div className="md:col-span-8">
             <p className="label-tech flex items-center gap-3 text-ink-muted">
@@ -93,31 +95,123 @@ function Home() {
       </section>
 
       {/* INTRODUCTION */}
-      <section className="container-x section-y">
-        <Reveal>
-          <SectionHeading
-            index="02"
-            eyebrow="Who we are"
-            align="split"
-            title="A construction company that works through the detail before the first block is laid."
-            intro={
-              <div className="space-y-4">
-                <p>
-                  Turiend Construction Limited is a Kenyan construction company. We take on
-                  building and civil works, water and electrical installations, perimeter and
-                  access works, biodigesters, and the management of projects and properties.
-                </p>
-                <p>
-                  Most projects go wrong for the same reasons: an unclear scope, trades arriving in
-                  the wrong order, and decisions made on site without the owner. We work the other
-                  way round — agree the scope, agree the sequence, then keep you informed while the
-                  work is carried out.
-                </p>
-              </div>
-            }
+      {/* INTRODUCTION */}
+<section className="container-x section-y">
+  <div className="grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-16">
+
+    {/* Introduction copy */}
+    <Reveal className="lg:col-span-5">
+      <div>
+        <p className="label-tech flex items-center gap-3 text-muted-foreground">
+          <span className="text-accent">02</span>
+          <span className="h-px w-8 bg-line" />
+          <span>Who we are</span>
+        </p>
+
+        <h2 className="mt-6 max-w-xl text-4xl font-semibold tracking-tight md:text-5xl">
+          Construction work, coordinated properly.
+        </h2>
+
+        <div className="mt-7 max-w-xl space-y-5 text-base leading-8 text-muted-foreground">
+          <p>
+            Turiend Construction Limited is a Kenyan construction company.
+            We take on building and civil works, water and electrical
+            installations, perimeter and access works, biodigesters, and
+            the management of projects and properties.
+          </p>
+
+          <p>
+            We work the other way round — agree the scope, agree the
+            sequence, then keep you informed while the work is carried out.
+          </p>
+        </div>
+
+        {/* Approach */}
+        <div className="mt-9 border-t border-line pt-5">
+          <p className="label-tech text-accent">
+            Our approach
+          </p>
+
+          <p className="mt-2 text-sm font-medium">
+            Clear scope. Proper supervision. Accountable delivery.
+          </p>
+        </div>
+
+        {/* About link */}
+        <Link
+          to="/about"
+          className="group mt-8 inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-accent"
+        >
+          More about Turiend
+          <ArrowRight
+            className="size-4 transition-transform group-hover:translate-x-1"
+            aria-hidden="true"
           />
-        </Reveal>
-      </section>
+        </Link>
+      </div>
+    </Reveal>
+
+    {/* Image */}
+    <Reveal
+      delay={100}
+      className="relative lg:col-span-7"
+    >
+      <div className="relative">
+
+        {/* Technical frame */}
+        <div
+          className="pointer-events-none absolute -inset-3 border border-line/60"
+          aria-hidden="true"
+        />
+
+        {/* Image */}
+        <div className="relative overflow-hidden bg-muted">
+          <img
+            src={aboutImage.src}
+            alt={aboutImage.alt}
+            width={1600}
+            height={1000}
+            loading="lazy"
+            className="aspect-4/3 w-full object-cover transition-transform duration-1200ms ease-out hover:scale-[1.02]"
+          />
+
+          {/* Image gradient */}
+          <div
+            className="absolute inset-0 bg-linear-to-t from-ink/45 via-transparent to-transparent"
+            aria-hidden="true"
+          />
+
+          {/* Image label */}
+          <div className="absolute bottom-4 left-4">
+            <span className="label-tech bg-ink/85 px-3 py-2 text-ink-foreground">
+              Turiend Construction
+            </span>
+          </div>
+
+          {/* Image index */}
+          <div className="absolute right-4 top-4">
+            <span className="label-tech bg-background/90 px-3 py-2">
+              01 / 02
+            </span>
+          </div>
+        </div>
+
+        {/* Caption */}
+        <div className="mt-5 flex items-start justify-between gap-6">
+          <p className="max-w-md text-xs leading-5 text-muted-foreground">
+            Coordinated construction services across building,
+            infrastructure and property works.
+          </p>
+
+          <span className="label-tech shrink-0 text-muted-foreground">
+            Nairobi · Kenya
+          </span>
+        </div>
+      </div>
+    </Reveal>
+
+  </div>
+</section>
 
       {/* SERVICES */}
       <section className="bg-surface">
@@ -264,7 +358,7 @@ function Home() {
               eyebrow="Why Turiend"
               align="split"
               title="What working with us actually gives you"
-              intro="No slogans — these are the practical differences clients notice on a running project."
+              intro="FROM CONCEPT TO CREATION."
             />
           </Reveal>
           <div className="mt-12 grid gap-x-12 gap-y-10 md:mt-16 md:grid-cols-2 lg:grid-cols-3">
@@ -306,81 +400,148 @@ function HeroCarousel() {
   const [paused, setPaused] = useState(false);
   const timer = useRef<number | null>(null);
 
-  const go = useCallback(
-    (next: number) => setIndex((next + heroSlides.length) % heroSlides.length),
+  const go = useCallback((next: number) => 
+    {
+    setIndex((next + heroSlides.length) % heroSlides.length);
+    },
     [],
   );
 
   useEffect(() => {
-    if (paused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (
+      paused ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return;
+    }
+
     timer.current = window.setInterval(() => {
-      setIndex((i) => (i + 1) % heroSlides.length);
+      setIndex((current) => (current + 1) % heroSlides.length);
     }, 6000);
+
     return () => {
-      if (timer.current) window.clearInterval(timer.current);
+      if (timer.current) {
+        window.clearInterval(timer.current);
+      }
     };
   }, [paused]);
 
   return (
     <div
-      className="absolute inset-0"
+      className="absolute inset-0 overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       role="region"
       aria-roledescription="carousel"
       aria-label="Turiend Construction highlights"
     >
+      {/* Slides */}
       {heroSlides.map((slide, i) => (
-        <img
+        <div
           key={slide.src}
-          src={slide.src}
-          alt={i === index ? slide.alt : ""}
-          width={1920}
-          height={1280}
-          fetchPriority={i === 0 ? "high" : "auto"}
-          loading={i === 0 ? "eager" : "lazy"}
-          aria-hidden={i !== index}
-          className={`absolute inset-0 size-full object-cover transition-opacity duration-1000 ${
-            i === index ? "opacity-45" : "opacity-0"
+          className={`absolute inset-0 overflow-hidden transition-opacity duration-1000 ${
+            i === index ? "opacity-100" : "opacity-0"
           }`}
-        />
-      ))}
-      <div className="absolute right-4 bottom-4 z-10 flex items-center gap-3 md:right-8 md:bottom-8">
-        <span className="label-tech hidden text-ink-muted md:block" aria-live="polite">
-          {heroSlides[index]!.caption}
-        </span>
-        <div className="flex gap-1.5" role="tablist" aria-label="Hero slides">
-          {heroSlides.map((slide, i) => (
-            <button
-              key={slide.src}
-              type="button"
-              role="tab"
-              aria-selected={i === index}
-              aria-label={`Slide ${i + 1}: ${slide.caption}`}
-              onClick={() => go(i)}
-              className={`h-1 transition-all duration-300 ${
-                i === index ? "w-8 bg-accent" : "w-4 bg-ink-foreground/30 hover:bg-ink-foreground/60"
-              }`}
-            />
-          ))}
+          aria-hidden={i !== index}
+        >
+          <img
+            src={slide.src}
+            alt={i === index ? slide.alt : ""}
+            width={1920}
+            height={1280}
+            fetchPriority={i === 0 ? "high" : "auto"}
+            loading={i === 0 ? "eager" : "lazy"}
+            className={`size-full object-cover transition-transform duration-7000 ease-out ${
+              i === index ? "scale-[1.06]" : "scale-100"
+            }`}
+          />
         </div>
-        <div className="flex gap-1">
-          <button
-            type="button"
-            onClick={() => go(index - 1)}
-            aria-label="Previous slide"
-            className="flex size-9 items-center justify-center border border-ink-line text-ink-foreground transition-colors hover:bg-ink-foreground hover:text-ink"
-          >
-            <ArrowLeft className="size-4" aria-hidden="true" />
-          </button>
-          <button
-            type="button"
-            onClick={() => go(index + 1)}
-            aria-label="Next slide"
-            className="flex size-9 items-center justify-center border border-ink-line text-ink-foreground transition-colors hover:bg-ink-foreground hover:text-ink"
-          >
-            <ArrowRight className="size-4" aria-hidden="true" />
-          </button>
+      ))}
+
+      {/* Slide information + controls */}
+      <div className="absolute inset-x-0 bottom-0 z-10">
+        <div className="container-x pb-6 md:pb-8">
+          <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+            
+            {/* Slide caption */}
+            <div>
+              <div className="flex items-center gap-3">
+                <span className="label-tech text-accent">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
+                <span className="h-px w-10 bg-ink-line" />
+
+                <span className="label-tech text-ink-muted">
+                  {String(heroSlides.length).padStart(2, "0")}
+                </span>
+              </div>
+
+              <p
+                className="mt-3 max-w-md text-sm font-medium tracking-wide text-ink-foreground md:text-base"
+                aria-live="polite"
+              >
+                {heroSlides[index]!.caption}
+              </p>
+            </div>
+
+            {/* Controls */}
+            <div className="flex items-center gap-4">
+              {/* Progress indicators */}
+              <div
+                className="flex items-center gap-2"
+                role="tablist"
+                aria-label="Hero slides"
+              >
+                {heroSlides.map((slide, i) => (
+                  <button
+                    key={slide.src}
+                    type="button"
+                    role="tab"
+                    aria-selected={i === index}
+                    aria-label={`Slide ${i + 1}: ${slide.caption}`}
+                    onClick={() => go(i)}
+                    className="group flex h-6 items-center"
+                  >
+                    <span
+                      className={`block h-px transition-all duration-500 ${
+                        i === index
+                          ? "w-10 bg-accent"
+                          : "w-5 bg-ink-foreground/30 group-hover:w-7 group-hover:bg-ink-foreground/60"
+                      }`}
+                    />
+                  </button>
+                ))}
+              </div>
+
+              {/* Previous / next */}
+              <div className="flex">
+                <button
+                  type="button"
+                  onClick={() => go(index - 1)}
+                  aria-label="Previous slide"
+                  className="flex size-10 items-center justify-center border border-ink-line text-ink-foreground transition-colors hover:bg-ink-foreground hover:text-ink"
+                >
+                  <ArrowLeft
+                    className="size-4"
+                    aria-hidden="true"
+                  />
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => go(index + 1)}
+                  aria-label="Next slide"
+                  className="flex size-10 items-center justify-center border-y border-r border-ink-line text-ink-foreground transition-colors hover:bg-ink-foreground hover:text-ink"
+                >
+                  <ArrowRight
+                    className="size-4"
+                    aria-hidden="true"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

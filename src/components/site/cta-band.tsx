@@ -19,7 +19,9 @@ export function CtaBand({
         <div className="md:col-span-7">
           <p className="label-tech text-accent">Next step</p>
           <h2 className="display-2 mt-5">{title}</h2>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-muted md:text-lg">{text}</p>
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-muted md:text-lg">
+            {text}
+          </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row md:col-span-5 md:justify-end">
           <CtaLink to="/quote" variant="accent" size="lg">

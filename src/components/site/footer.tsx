@@ -1,9 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/turiend-logo.jpg.asset.json";
+import logo from "@/assets/logo.png";
 import { company, services } from "@/lib/company";
 import { track } from "@/lib/analytics";
-import { navItems } from "./header";
+import { navItems } from "@/lib/navigation";
 
 export function SiteFooter() {
   return (
@@ -11,7 +11,7 @@ export function SiteFooter() {
       <div className="container-x grid gap-12 py-16 md:grid-cols-12 md:py-20">
         <div className="md:col-span-4">
           <img
-            src={logo.url}
+            src={logo}
             alt="Turiend Construction Limited"
             width={220}
             height={64}

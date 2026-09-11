@@ -58,8 +58,7 @@ function Faqs() {
     const q = query.trim().toLowerCase();
     return generalFaqs.filter((faq) => {
       const inCategory = category === "All" || faq.category === category;
-      const inQuery =
-        !q || faq.q.toLowerCase().includes(q) || faq.a.toLowerCase().includes(q);
+      const inQuery = !q || faq.q.toLowerCase().includes(q) || faq.a.toLowerCase().includes(q);
       return inCategory && inQuery;
     });
   }, [query, category]);
