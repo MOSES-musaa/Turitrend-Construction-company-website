@@ -426,7 +426,7 @@ function QuotePage() {
                     <p className="text-xl font-semibold tracking-tight">Review your enquiry.</p>
 
                     <p className="mt-2 text-sm text-muted-foreground">
-                      Check the summary below before sending it to the Turiend team.
+                      Check the summary below before sending it to the Turitrend team.
                     </p>
 
                     <pre className="mt-5 overflow-x-auto border border-line bg-surface p-5 font-mono text-xs leading-relaxed whitespace-pre-wrap">
