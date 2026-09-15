@@ -36,7 +36,6 @@ function Projects() {
   return (
     <>
       <PageHero
-        index="01"
         eyebrow="Projects"
         title="Project showcases are being documented."
         intro="Rather than fill this page with images that are not ours, we are preparing proper documentation and photography of completed Turitrend works. It will be published here as it is ready."
@@ -45,7 +44,6 @@ function Projects() {
       <section className="container-x section-y">
         <Reveal>
           <SectionHeading
-            index="02"
             eyebrow="Filter"
             title="Browse by service area"
             intro="Filters are live — project entries will appear under the relevant service area as they are published."

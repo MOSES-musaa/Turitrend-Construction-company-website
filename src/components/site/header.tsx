@@ -40,11 +40,11 @@ export function SiteHeader() {
         <Link
           to="/"
           className="flex shrink-0 items-center"
-          aria-label="Turiend Construction Limited — home"
+          aria-label="Turitrend Construction Limited — home"
         >
           <img
             src={logo}
-            alt="Turiend Construction Limited"
+            alt="Turitrend Construction Limited"
             width={280}
             height={82}
             className={cn(

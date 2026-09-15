@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * TURIEND CONSTRUCTION — design system
+ * TURITREND CONSTRUCTION — design system
  *
  * Architectural palette: graphite ink, structural blue (from the company mark),
  * warm limestone neutrals and a single copper accent.
@@ -300,4 +300,18 @@
   to {
     transform: scaleX(1);
   }
+}
+
+@keyframes hero-carousel-pan {
+  0% {
+    transform: scale(1.05) translate3d(-1%, -0.5%, 0);
+  }
+
+  100% {
+    transform: scale(1.12) translate3d(1%, 0.5%, 0);
+  }
+}
+
+.hero-carousel-image {
+  animation: hero-carousel-pan 6.5s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
 }

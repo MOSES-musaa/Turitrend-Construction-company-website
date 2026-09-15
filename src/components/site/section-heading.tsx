@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 export function SectionHeading({
-  index,
   eyebrow,
   title,
   intro,
@@ -32,10 +31,9 @@ export function SectionHeading({
         )}
       >
         <div className={align === "split" ? "md:col-span-7" : undefined}>
-          {(index || eyebrow) && (
+          {eyebrow && (
             <p className={cn("label-tech mb-5 flex items-center gap-3", muted)}>
-              {index && <span className="text-accent">{index}</span>}
-              {eyebrow && <span>{eyebrow}</span>}
+              <span>{eyebrow}</span>
             </p>
           )}
           <Tag className="display-2 max-w-3xl">{title}</Tag>

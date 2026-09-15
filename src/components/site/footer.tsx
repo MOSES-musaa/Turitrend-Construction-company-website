@@ -12,7 +12,7 @@ export function SiteFooter() {
         <div className="md:col-span-4">
           <img
             src={logo}
-            alt="Turiend Construction Limited"
+            alt="Turitrend Construction Limited"
             width={220}
             height={64}
             loading="lazy"

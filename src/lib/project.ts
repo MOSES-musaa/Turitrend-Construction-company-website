@@ -79,7 +79,7 @@ export const projects: Project[] = [
     category: "Project Management",
     location: "Mwihoko,Kiambu",
     description:
-      "Turiend provided project management services for the construction of a five-storey apartment development in MWihoko,overseeing project coordination and management requirements to support effective execution and delivery.",
+      "Turitrend provided project management services for the construction of a five-storey apartment development in MWihoko,overseeing project coordination and management requirements to support effective execution and delivery.",
     scope: [],
     servicesProvided: ["Project management"],
     status: "Completed",
@@ -107,7 +107,8 @@ export const projects: Project[] = [
     name: "Car Shades & Automation",
     category: "Car Shades & Gates",
     location: "Kenya",
-    description: "Car shade, gate and automation works delivered by Turiend Construction Limited.",
+    description:
+      "Car shade, gate and automation works delivered by Turitrend Construction Limited.",
     scope: [],
     servicesProvided: ["Car shades", "Gates", "Automation"],
     status: "Completed",
@@ -124,7 +125,7 @@ export const projects: Project[] = [
     category: "Fences",
     location: "Loresho, Nairobi",
     description:
-      "Fencing works delivered by Turiend Construction Limited providing a practical boundary solution that enhances privacy, security and the overall appearance of the property.",
+      "Fencing works delivered by Turitrend Construction Limited providing a practical boundary solution that enhances privacy, security and the overall appearance of the property.",
     scope: [],
     servicesProvided: ["Fencing"],
     status: "Completed",
@@ -140,7 +141,8 @@ export const projects: Project[] = [
     name: "Fixing floor-Boards",
     category: "Home Renovations",
     location: "Loresho, Nairobi",
-    description: "Home renovation and improvement works delivered by Turiend Construction Limited.",
+    description:
+      "Home renovation and improvement works delivered by Turitrend Construction Limited.",
     scope: [],
     servicesProvided: ["Home renovations"],
     status: "Completed",
@@ -152,7 +154,8 @@ export const projects: Project[] = [
     name: "Kikuyu Ondiri House Renovation",
     category: "Home Renovations",
     location: "Kikuyu, Nairobi",
-    description: "Home renovation and improvement works delivered by Turiend Construction Limited.",
+    description:
+      "Home renovation and improvement works delivered by Turitrend Construction Limited.",
     scope: [],
     servicesProvided: ["Home renovations"],
     status: "Completed",
@@ -164,7 +167,8 @@ export const projects: Project[] = [
     name: "Loresho Maisonette Renovation and Painting works",
     category: "Home Renovations",
     location: "Loresho, Nairobi",
-    description: "Home renovation and improvement works delivered by Turiend Construction Limited.",
+    description:
+      "Home renovation and improvement works delivered by Turitrend Construction Limited.",
     scope: [],
     servicesProvided: ["Home renovations"],
     status: "Completed",
@@ -176,7 +180,8 @@ export const projects: Project[] = [
     name: "32 Bedsitters and 2 Commercial Units Renovation",
     category: "Home Renovations",
     location: "Kirwara, Gatanga",
-    description: "Home renovation and improvement works delivered by Turiend Construction Limited.",
+    description:
+      "Home renovation and improvement works delivered by Turitrend Construction Limited.",
     scope: [],
     servicesProvided: ["Home renovations"],
     status: "Completed",
@@ -189,7 +194,7 @@ export const projects: Project[] = [
     category: "Home Renovations",
     location: "Isinya, Kajiado",
     description:
-      "Turiend carried out rehabilitation works on silage bunkers in Isinya, focusing on restoring and improving the existing structures for continued practical use.",
+      "Turitrend carried out rehabilitation works on silage bunkers in Isinya, focusing on restoring and improving the existing structures for continued practical use.",
     scope: [],
     servicesProvided: ["Home renovations"],
     status: "Completed",
@@ -206,7 +211,7 @@ export const projects: Project[] = [
     category: "Infrastructure",
     location: "Makuyu, Murang'a",
     description:
-      "Infrastructure construction and improvement works delivered by Turiend Construction Limited.",
+      "Infrastructure construction and improvement works delivered by Turitrend Construction Limited.",
     scope: [],
     servicesProvided: ["Infrastructure works"],
     status: "Completed",
@@ -219,7 +224,7 @@ export const projects: Project[] = [
     category: "Infrastructure",
     location: "Isinya, Kajiado",
     description:
-      "Infrastructure construction and improvement works delivered by Turiend Construction Limited.",
+      "Infrastructure construction and improvement works delivered by Turitrend Construction Limited.",
     scope: [],
     servicesProvided: ["Infrastructure works"],
     status: "Completed",
@@ -232,7 +237,7 @@ export const projects: Project[] = [
     category: "Infrastructure",
     location: "Isinya, Kajiado",
     description:
-      "Infrastructure construction and improvement works delivered by Turiend Construction Limited.",
+      "Infrastructure construction and improvement works delivered by Turitrend Construction Limited.",
     scope: [],
     servicesProvided: ["Infrastructure works"],
     status: "Completed",

@@ -1,8 +1,8 @@
-Turiend Construction Limited Website
+Turitrend Construction Limited Website
 
-Professional website for Turiend Construction Limited, a Kenya-based construction company delivering building, renovation, infrastructure, property management, fencing, gates, car shades, and biodigester works.
+Professional website for Turitrend Construction Limited, a Kenya-based construction company delivering building, renovation, infrastructure, property management, fencing, gates, car shades, and biodigester works.
 
-The website provides a clean, professional digital presence focused on communicating Turiend's capabilities, presenting projects and insights, and making it easy for prospective clients to contact the company or request a quote.
+The website provides a clean, professional digital presence focused on communicating Turitrend's capabilities, presenting projects and insights, and making it easy for prospective clients to contact the company or request a quote.
 
 Overview
 
@@ -12,13 +12,13 @@ The application combines an architectural/editorial visual language with practic
 
 Visitors can:
 
-Explore Turiend's services.
+Explore Turitrend's services.
 
 Browse project categories and individual project galleries.
 
 Read construction-related insights.
 
-Contact Turiend through a website form.
+Contact Turitrend through a website form.
 
 Submit a structured six-step quote request.
 
@@ -481,7 +481,7 @@ Environment-specific secrets are stored in a local .env file.
 Example:
 
 RESEND_API_KEY=re_your_resend_api_key
-EMAIL_FROM=Turiend Website <onboarding@resend.dev>
+EMAIL_FROM=Turitrend Website <onboarding@resend.dev>
 EMAIL_TO=your-recipient@example.com
 
 Security

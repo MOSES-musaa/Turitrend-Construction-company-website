@@ -3,7 +3,6 @@ import type { ReactNode } from "react";
 import { Reveal } from "@/components/site/reveal";
 
 export function PageHero({
-  index,
   eyebrow,
   title,
   intro,
@@ -45,12 +44,6 @@ export function PageHero({
         {/* Eyebrow */}
         <Reveal delay={0}>
           <p className="label-tech flex items-center gap-3 text-ink-muted">
-            {index && (
-              <span className="text-accent">
-                {index}
-              </span>
-            )}
-
             <span>{eyebrow}</span>
           </p>
         </Reveal>

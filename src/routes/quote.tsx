@@ -18,15 +18,15 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/quote")({
   head: () => ({
     meta: [
-      { title: "Request a Quote | Turiend Construction Limited" },
+      { title: "Request a Quote | Turitrend Construction Limited" },
       {
         name: "description",
         content:
-          "Tell Turiend Construction about your project — building, renovations, fencing, biodigesters, road, electrical or water works — and receive a considered response.",
+          "Tell Turitrend Construction about your project — building, renovations, fencing, biodigesters, road, electrical or water works — and receive a considered response.",
       },
       {
         property: "og:title",
-        content: "Request a Quote | Turiend Construction Limited",
+        content: "Request a Quote | Turitrend Construction Limited",
       },
       {
         property: "og:description",
@@ -175,7 +175,6 @@ function QuotePage() {
   return (
     <>
       <PageHero
-        index="08"
         eyebrow="Request a quote"
         title="Tell us about your project."
         intro="Six short steps. The more specific you are, the more useful our first response will be."
@@ -190,7 +189,7 @@ function QuotePage() {
               <h2 className="display-3 mt-4">Thank you, {form.name.split(" ")[0]}.</h2>
 
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-                Your quote request has been sent successfully to the Turiend team. We have the
+                Your quote request has been sent successfully to the Turitrend team. We have the
                 project details below and will review them before getting back to you.
               </p>
 
@@ -201,7 +200,7 @@ function QuotePage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href={whatsappLink(
-                    `Hello Turiend, I have just submitted a quote request through your website.\n\n${summary}`,
+                    `Hello Turitrend, I have just submitted a quote request through your website.\n\n${summary}`,
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -219,9 +218,9 @@ function QuotePage() {
           ) : (
             <>
               {/* Stepper */}
-              <ol className="grid grid-cols-6 gap-px border border-line bg-line">
+              <div className="grid grid-cols-6 gap-px border border-line bg-line">
                 {steps.map((label, i) => (
-                  <li
+                  <div
                     key={label}
                     className={cn(
                       "bg-background px-2 py-3 text-center text-[0.65rem] font-medium tracking-wider uppercase",
@@ -229,12 +228,10 @@ function QuotePage() {
                       i < step && "bg-surface text-muted-foreground",
                     )}
                   >
-                    <span className="mr-1 font-mono">{String(i + 1).padStart(2, "0")}</span>
-
                     <span className="hidden sm:inline">{label}</span>
-                  </li>
+                  </div>
                 ))}
-              </ol>
+              </div>
 
               <div className="mt-8 border border-line bg-card p-6 md:p-10">
                 {step === 0 && (

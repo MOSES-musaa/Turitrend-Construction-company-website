@@ -19,7 +19,6 @@ function InsightsPage() {
     <main>
       {/* Page introduction */}
       <PageHero
-  index="06"
   eyebrow="Insights"
   title={
     <>

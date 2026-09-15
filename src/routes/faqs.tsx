@@ -15,16 +15,16 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/faqs")({
   head: () => ({
     meta: [
-      { title: "FAQs | Turiend Construction Limited" },
+      { title: "FAQs | Turitrend Construction Limited" },
       {
         name: "description",
         content:
           "Answers on quotations, building works, renovations, fencing and gates, biodigesters, road, electrical and water works, and project management in Kenya.",
       },
-      { property: "og:title", content: "Frequently Asked Questions | Turiend Construction" },
+      { property: "og:title", content: "Frequently Asked Questions | Turitrend Construction" },
       {
         property: "og:description",
-        content: "Common questions about working with Turiend Construction Limited in Kenya.",
+        content: "Common questions about working with Turitrend Construction Limited in Kenya.",
       },
     ],
     scripts: [
@@ -66,7 +66,6 @@ function Faqs() {
   return (
     <>
       <PageHero
-        index="01"
         eyebrow="FAQs"
         title="Questions clients ask us."
         intro="Straight answers on scope, quotations and what each service actually involves."
@@ -149,7 +148,7 @@ function Faqs() {
       <CtaBand
         title="Still need an answer?"
         text="Send us the question with a little detail about the property and we will respond."
-        whatsappMessage="Hello Turiend, I have a question about your construction services."
+        whatsappMessage="Hello Turitrend, I have a question about your construction services."
         context="faqs"
       />
     </>

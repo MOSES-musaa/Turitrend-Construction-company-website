@@ -58,8 +58,6 @@ export function TeamSection() {
         <Reveal>
           <div className="max-w-5xl">
             <div className="flex items-center gap-4">
-              <span className="label-tech text-accent">03</span>
-
               <span className="h-px w-12 bg-line" aria-hidden="true" />
 
               <span className="label-tech text-muted-foreground">Our team</span>
@@ -91,10 +89,6 @@ export function TeamSection() {
 
                   <div className="min-w-0">
                     <div className="flex items-center gap-3">
-                      <span className="label-tech text-muted-foreground">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-
                       <span className="h-px flex-1 bg-line" aria-hidden="true" />
                     </div>
 
@@ -114,13 +108,6 @@ export function TeamSection() {
                     {member.bio}
                   </p>
                 </div>
-
-                {/* Bottom technical line */}
-                <div className="flex items-center gap-3 border-t border-line px-5 py-4 md:px-6">
-                  <span className="h-1 w-8 bg-accent" aria-hidden="true" />
-
-                  <span className="label-tech text-muted-foreground">Turitrend Construction</span>
-                </div>
               </article>
             </Reveal>
           ))}
@@ -130,7 +117,6 @@ export function TeamSection() {
         <Reveal delay={180}>
           <div className="mt-12 grid border-y border-line md:grid-cols-3">
             <div className="border-b border-line py-6 md:border-b-0 md:border-r md:px-8 md:first:pl-0">
-              <p className="label-tech text-accent">01</p>
               <h3 className="mt-3 text-lg font-semibold tracking-tight">A Collaborative Team</h3>
               <p className="mt-2 max-w-xs text-sm leading-6 text-muted-foreground">
                 We work together towards shared goals and better project outcomes.
@@ -138,7 +124,6 @@ export function TeamSection() {
             </div>
 
             <div className="border-b border-line py-6 md:border-b-0 md:border-r md:px-8">
-              <p className="label-tech text-accent">02</p>
               <h3 className="mt-3 text-lg font-semibold tracking-tight">Professional Standards</h3>
               <p className="mt-2 max-w-xs text-sm leading-6 text-muted-foreground">
                 We uphold high standards in planning, coordination and delivery.
@@ -146,7 +131,6 @@ export function TeamSection() {
             </div>
 
             <div className="py-6 md:px-8 md:pr-0">
-              <p className="label-tech text-accent">03</p>
               <h3 className="mt-3 text-lg font-semibold tracking-tight">Results Driven</h3>
               <p className="mt-2 max-w-xs text-sm leading-6 text-muted-foreground">
                 We focus on practical solutions and quality delivery from start to completion.

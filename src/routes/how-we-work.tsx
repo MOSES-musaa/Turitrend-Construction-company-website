@@ -10,17 +10,17 @@ import { processImage } from "@/lib/placeholders";
 export const Route = createFileRoute("/how-we-work")({
   head: () => ({
     meta: [
-      { title: "How We Work | Turiend Construction Limited" },
+      { title: "How We Work | Turitrend Construction Limited" },
       {
         name: "description",
         content:
           "Our six-step project journey: understand, assess, plan and cost, mobilize, execute and supervise, complete and hand over.",
       },
-      { property: "og:title", content: "How We Work | Turiend Construction Limited" },
+      { property: "og:title", content: "How We Work | Turitrend Construction Limited" },
       {
         property: "og:description",
         content:
-          "The six steps a Turiend project moves through, from first conversation to handover.",
+          "The six steps a Turitrend project moves through, from first conversation to handover.",
       },
     ],
   }),
@@ -58,7 +58,6 @@ function HowWeWork() {
   return (
     <>
       <PageHero
-        index="01"
         eyebrow="How we work"
         title="Six steps, in the same order, every time."
         intro="Whether the job is a set of repairs or a full building, the sequence is what keeps scope, cost and programme under control."
@@ -67,15 +66,14 @@ function HowWeWork() {
       <section className="container-x section-y">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-8">
-            <ol>
+            <div>
               {processSteps.map((step, i) => (
                 <Reveal
                   key={step.number}
-                  as="li"
+                  as="div"
                   delay={i * 50}
-                  className="grid gap-4 border-t border-line py-10 last:border-b md:grid-cols-[6rem_1fr] md:gap-8"
+                  className="border-t border-line py-10 last:border-b"
                 >
-                  <span className="label-tech pt-2 text-accent">{step.number}</span>
                   <div>
                     <h2 className="display-3">{step.title}</h2>
                     <p className="mt-4 max-w-2xl text-base leading-relaxed md:text-lg">
@@ -94,7 +92,7 @@ function HowWeWork() {
                   </div>
                 </Reveal>
               ))}
-            </ol>
+            </div>
           </div>
           <Reveal className="md:col-span-4">
             <div className="sticky top-28">

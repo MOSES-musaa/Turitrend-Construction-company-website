@@ -32,8 +32,8 @@ export const Route = createFileRoute("/services/$slug")({
     const service = loaderData?.service;
 
     const title = service
-      ? `${service.title} | Turiend Construction Limited`
-      : "Service | Turiend Construction Limited";
+      ? `${service.title} | Turitrend Construction Limited`
+      : "Service | Turitrend Construction Limited";
 
     const description = service?.summary ?? "Construction services in Kenya.";
 
@@ -57,7 +57,7 @@ function ServiceDetail() {
     .map((slug) => services.find((s) => s.slug === slug))
     .filter((s): s is (typeof services)[number] => Boolean(s));
 
-  const whatsappMessage = `Hello Turiend, I am interested in your ${service.shortTitle} services and would like to discuss my project.`;
+  const whatsappMessage = `Hello Turitrend, I am interested in your ${service.shortTitle} services and would like to discuss my project.`;
 
   useEffect(() => {
     track("service_view", {
@@ -67,12 +67,7 @@ function ServiceDetail() {
 
   return (
     <>
-      <PageHero
-        index={service.number}
-        eyebrow="Service"
-        title={service.title}
-        intro={service.summary}
-      >
+      <PageHero eyebrow="Service" title={service.title} intro={service.summary}>
         <div className="flex flex-col gap-5">
           <Link
             to="/services"
@@ -117,11 +112,7 @@ function ServiceDetail() {
 
               <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-ink/45 via-transparent to-transparent" />
 
-              <div className="absolute bottom-5 left-5 flex items-center gap-3">
-                <span className="label-tech bg-ink/85 px-3 py-2 text-ink-foreground backdrop-blur-sm">
-                  {service.number}
-                </span>
-
+              <div className="absolute bottom-5 left-5">
                 <span className="label-tech bg-background/90 px-3 py-2 text-foreground backdrop-blur-sm">
                   {service.shortTitle}
                 </span>
@@ -130,7 +121,7 @@ function ServiceDetail() {
           </Reveal>
 
           <Reveal delay={120} className="flex flex-col justify-center md:col-span-5">
-            <p className="label-tech text-accent">01 / The service</p>
+            <p className="label-tech text-accent">The service</p>
 
             <h2 className="display-3 mt-5">What this service covers.</h2>
 
@@ -153,7 +144,6 @@ function ServiceDetail() {
         <div className="container-x section-y">
           <Reveal>
             <SectionHeading
-              index="02"
               eyebrow="Scope"
               title="What the work can include"
               intro="The exact scope depends on the property and project requirements. Typical work may include the following."
@@ -164,8 +154,6 @@ function ServiceDetail() {
             {service.includes.map((group, i) => (
               <Reveal key={group.heading ?? i} delay={i * 70} className="bg-background p-7 md:p-8">
                 <div className="flex items-start justify-between gap-5">
-                  <span className="label-tech text-accent">{String(i + 1).padStart(2, "0")}</span>
-
                   {group.heading && (
                     <h3 className="max-w-14rem text-right text-sm font-semibold tracking-tight">
                       {group.heading}
@@ -194,7 +182,7 @@ function ServiceDetail() {
         <div className="grid gap-14 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-5">
             <Reveal>
-              <SectionHeading index="03" eyebrow="Typical needs" title="When clients call us." />
+              <SectionHeading eyebrow="Typical needs" title="When clients call us." />
             </Reveal>
 
             <ul className="mt-9 space-y-5">
@@ -213,21 +201,17 @@ function ServiceDetail() {
 
           <div className="md:col-span-7">
             <Reveal>
-              <SectionHeading index="04" eyebrow="Our approach" title="How we handle the work." />
+              <SectionHeading eyebrow="Our approach" title="How we handle the work." />
             </Reveal>
 
-            <ol className="mt-9">
+            <div className="mt-9">
               {service.approach.map((item, i) => (
                 <Reveal
                   key={item.step}
-                  as="li"
+                  as="div"
                   delay={i * 60}
-                  className="grid grid-cols-[3.5rem_1fr] gap-5 border-t border-line py-6 last:border-b"
+                  className="border-t border-line py-6 last:border-b"
                 >
-                  <span className="label-tech pt-1 text-accent">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-
                   <div>
                     <h3 className="text-base font-semibold tracking-tight">{item.step}</h3>
 
@@ -237,7 +221,7 @@ function ServiceDetail() {
                   </div>
                 </Reveal>
               ))}
-            </ol>
+            </div>
           </div>
         </div>
       </section>
@@ -245,7 +229,7 @@ function ServiceDetail() {
       <section className="bg-surface">
         <div className="container-x section-y">
           <Reveal>
-            <SectionHeading index="05" eyebrow="FAQs" title="Questions we are asked." />
+            <SectionHeading eyebrow="FAQs" title="Questions we are asked." />
           </Reveal>
 
           <Reveal delay={100} className="mt-9 max-w-3xl">
@@ -276,7 +260,7 @@ function ServiceDetail() {
 
       <section className="container-x section-y">
         <Reveal>
-          <SectionHeading index="06" eyebrow="Related" title="Other services." />
+          <SectionHeading eyebrow="Related" title="Other services." />
         </Reveal>
 
         <div className="mt-10 grid gap-px border border-line bg-line md:grid-cols-3">

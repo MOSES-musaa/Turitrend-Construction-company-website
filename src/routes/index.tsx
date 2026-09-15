@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import heroImage from "@/assets/hero-architecture.jpg";
 import heroConstruction from "@/assets/hero-construction.jpg";
 import blueprint from "@/assets/blueprint-lines.jpg";
@@ -17,20 +17,20 @@ import {
   processSteps,
   projectFinder,
   services,
-  whyTuriend,
+  whyTuritrend,
 } from "@/lib/company";
 import { track } from "@/lib/analytics";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Turiend Construction Limited | Construction Company in Kenya" },
+      { title: "Turitrend Construction Limited | Construction Company in Kenya" },
       {
         name: "description",
         content:
-          "Building works, renovations, fencing and gate automation, biodigesters, road, electrical and water works, and project management across Kenya. Request a quote from Turiend.",
+          "Building works, renovations, fencing and gate automation, biodigesters, road, electrical and water works, and project management across Kenya. Request a quote from Turitrend.",
       },
-      { property: "og:title", content: "Turiend Construction Limited | Construction in Kenya" },
+      { property: "og:title", content: "Turitrend Construction Limited | Construction in Kenya" },
       {
         property: "og:description",
         content:
@@ -51,11 +51,10 @@ function Home() {
         <div className="container-x relative grid gap-12 pt-16 pb-16 md:min-h-[82vh] md:grid-cols-12 md:content-center md:pt-24 md:pb-24">
           <div className="md:col-span-8">
             <p className="label-tech flex items-center gap-3 text-ink-muted">
-              <span className="text-accent">01</span>
               <span>{company.location}</span>
             </p>
             <h1 className="display-1 mt-6">
-              Turiend Construction
+              Turitrend Construction
               <span className="block text-accent">Limited</span>
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink-foreground/85 md:text-xl">
@@ -103,7 +102,6 @@ function Home() {
     <Reveal className="lg:col-span-5">
       <div>
         <p className="label-tech flex items-center gap-3 text-muted-foreground">
-          <span className="text-accent">02</span>
           <span className="h-px w-8 bg-line" />
           <span>Who we are</span>
         </p>
@@ -114,7 +112,7 @@ function Home() {
 
         <div className="mt-7 max-w-xl space-y-5 text-base leading-8 text-muted-foreground">
           <p>
-            Turiend Construction Limited is a Kenyan construction company.
+            Turitrend Construction Limited is a Kenyan construction company.
             We take on building and civil works, water and electrical
             installations, perimeter and access works, biodigesters, and
             the management of projects and properties.
@@ -142,7 +140,7 @@ function Home() {
           to="/about"
           className="group mt-8 inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-accent"
         >
-          More about Turiend
+          More about Turitrend
           <ArrowRight
             className="size-4 transition-transform group-hover:translate-x-1"
             aria-hidden="true"
@@ -184,14 +182,13 @@ function Home() {
           {/* Image label */}
           <div className="absolute bottom-4 left-4">
             <span className="label-tech bg-ink/85 px-3 py-2 text-ink-foreground">
-              Turiend Construction
+              Turitrend Construction
             </span>
           </div>
 
           {/* Image index */}
           <div className="absolute right-4 top-4">
             <span className="label-tech bg-background/90 px-3 py-2">
-              01 / 02
             </span>
           </div>
         </div>
@@ -218,7 +215,6 @@ function Home() {
         <div className="container-x section-y">
           <Reveal>
             <SectionHeading
-              index="03"
               eyebrow="What we do"
               title="Six core service areas"
               intro="Each area can be a project on its own, or one part of a larger scope we deliver together."
@@ -232,7 +228,6 @@ function Home() {
                   params={{ slug: service.slug }}
                   className="group flex h-full flex-col p-7 transition-colors hover:bg-ink hover:text-ink-foreground md:p-9"
                 >
-                  <span className="label-tech text-accent">{service.number}</span>
                   <h3 className="mt-6 text-xl leading-tight font-semibold tracking-tight md:text-2xl">
                     {service.shortTitle}
                   </h3>
@@ -254,7 +249,6 @@ function Home() {
       <section className="container-x section-y">
         <Reveal>
           <SectionHeading
-            index="04"
             eyebrow="Project finder"
             title="What are you planning?"
             intro="Pick the closest description and we will take you to the right place."
@@ -281,7 +275,6 @@ function Home() {
         <div className="container-x section-y">
           <Reveal>
             <SectionHeading
-              index="05"
               eyebrow="How we work"
               tone="dark"
               align="split"
@@ -290,22 +283,21 @@ function Home() {
             />
           </Reveal>
           <div className="mt-12 grid gap-10 md:mt-16 md:grid-cols-12 md:items-start">
-            <ol className="md:col-span-7">
+            <div className="md:col-span-7">
               {processSteps.map((step, i) => (
                 <Reveal
                   key={step.number}
-                  as="li"
+                  as="div"
                   delay={i * 60}
-                  className="grid grid-cols-[3.5rem_1fr] gap-4 border-t border-ink-line py-6 last:border-b"
+                  className="border-t border-ink-line py-6 last:border-b"
                 >
-                  <span className="label-tech pt-1 text-accent">{step.number}</span>
                   <div>
                     <h3 className="text-lg font-semibold tracking-tight">{step.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-ink-muted">{step.text}</p>
                   </div>
                 </Reveal>
               ))}
-            </ol>
+            </div>
             <Reveal className="md:col-span-5">
               <img
                 src={blueprint}
@@ -326,7 +318,7 @@ function Home() {
       {/* WHO WE WORK WITH */}
       <section className="container-x section-y">
         <Reveal>
-          <SectionHeading index="06" eyebrow="Who we work with" title="Clients we can serve" />
+          <SectionHeading eyebrow="Who we work with" title="Clients we can serve" />
         </Reveal>
         <div className="mt-10 grid gap-px border border-line bg-line md:mt-14 md:grid-cols-3">
           {clientTypes.map((client, i) => (
@@ -338,7 +330,7 @@ function Home() {
           <div className="hidden bg-surface p-8 md:block lg:col-span-1">
             <p className="label-tech text-muted-foreground">Not sure where you fit?</p>
             <WhatsAppCta
-              message="Hello Turiend, I would like to discuss a construction project."
+              message="Hello Turitrend, I would like to discuss a construction project."
               label="Ask us on WhatsApp"
               variant="quiet"
               size="sm"
@@ -349,20 +341,19 @@ function Home() {
         </div>
       </section>
 
-      {/* WHY TURIEND */}
+      {/* WHY TURITREND */}
       <section className="bg-surface">
         <div className="container-x section-y">
           <Reveal>
             <SectionHeading
-              index="07"
-              eyebrow="Why Turiend"
+              eyebrow="Why Turitrend"
               align="split"
               title="What working with us actually gives you"
               intro="FROM CONCEPT TO CREATION."
             />
           </Reveal>
           <div className="mt-12 grid gap-x-12 gap-y-10 md:mt-16 md:grid-cols-2 lg:grid-cols-3">
-            {whyTuriend.map((item, i) => (
+            {whyTuritrend.map((item, i) => (
               <Reveal key={item.title} delay={i * 50} className="border-t border-line pt-6">
                 <h3 className="text-lg font-semibold tracking-tight">{item.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
@@ -397,8 +388,6 @@ const heroSlides = [
 
 function HeroCarousel() {
   const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const timer = useRef<number | null>(null);
 
   const go = useCallback((next: number) => 
     {
@@ -408,38 +397,27 @@ function HeroCarousel() {
   );
 
   useEffect(() => {
-    if (
-      paused ||
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    ) {
-      return;
-    }
-
-    timer.current = window.setInterval(() => {
+    const timer = window.setInterval(() => {
       setIndex((current) => (current + 1) % heroSlides.length);
-    }, 6000);
+    }, 6500);
 
     return () => {
-      if (timer.current) {
-        window.clearInterval(timer.current);
-      }
+      window.clearInterval(timer);
     };
-  }, [paused]);
+  }, []);
 
   return (
     <div
       className="absolute inset-0 overflow-hidden"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
       role="region"
       aria-roledescription="carousel"
-      aria-label="Turiend Construction highlights"
+      aria-label="Turitrend Construction highlights"
     >
       {/* Slides */}
       {heroSlides.map((slide, i) => (
         <div
           key={slide.src}
-          className={`absolute inset-0 overflow-hidden transition-opacity duration-1000 ${
+          className={`absolute inset-0 overflow-hidden transition-opacity duration-1800 ease-in-out ${
             i === index ? "opacity-100" : "opacity-0"
           }`}
           aria-hidden={i !== index}
@@ -451,8 +429,8 @@ function HeroCarousel() {
             height={1280}
             fetchPriority={i === 0 ? "high" : "auto"}
             loading={i === 0 ? "eager" : "lazy"}
-            className={`size-full object-cover transition-transform duration-7000 ease-out ${
-              i === index ? "scale-[1.06]" : "scale-100"
+            className={`size-full object-cover will-change-transform ${
+              i === index ? "hero-carousel-image" : "scale-100"
             }`}
           />
         </div>
@@ -466,9 +444,6 @@ function HeroCarousel() {
             {/* Slide caption */}
             <div>
               <div className="flex items-center gap-3">
-                <span className="label-tech text-accent">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
 
                 <span className="h-px w-10 bg-ink-line" />
 

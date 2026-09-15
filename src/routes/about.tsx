@@ -4,24 +4,24 @@ import { CtaBand } from "@/components/site/cta-band";
 import { PageHero } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { SectionHeading } from "@/components/site/section-heading";
-import { clientTypes, company, services, whyTuriend } from "@/lib/company";
+import { clientTypes, company, services, whyTuritrend } from "@/lib/company";
 import { aboutImage } from "@/lib/placeholders";
 import { TeamSection } from "@/components/site/team-section";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Turiend Construction Limited | Nairobi, Kenya" },
+      { title: "About Turitrend Construction Limited | Nairobi, Kenya" },
       {
         name: "description",
         content:
-          "Turiend Construction Limited is a Kenyan construction company covering building, civil, water and electrical works, perimeter works, biodigesters and project management.",
+          "Turitrend Construction Limited is a Kenyan construction company covering building, civil, water and electrical works, perimeter works, biodigesters and project management.",
       },
-      { property: "og:title", content: "About Turiend Construction Limited" },
+      { property: "og:title", content: "About Turitrend Construction Limited" },
       {
         property: "og:description",
         content:
-          "Who Turiend is, how we work with clients, and the disciplines we cover across Kenya.",
+          "Who Turitrend is, how we work with clients, and the disciplines we cover across Kenya.",
       },
     ],
   }),
@@ -43,10 +43,9 @@ function About() {
   return (
     <>
       <PageHero
-        index="01"
         eyebrow="About"
         title="A Kenyan construction company built around clear scope and proper supervision."
-        intro="Turiend Construction Limited delivers building, civil, water and electrical works, perimeter and access works, biodigesters, and project and property management."
+        intro="Turitrend Construction Limited delivers building, civil, water and electrical works, perimeter and access works, biodigesters, and project and property management."
       />
 
       <section className="container-x pt-16 pb-10 md:pt-24 md:pb-12">
@@ -55,7 +54,6 @@ function About() {
           <Reveal className="lg:col-span-5">
             <div>
               <p className="label-tech flex items-center gap-3 text-muted-foreground">
-                <span className="text-accent">02</span>
                 <span className="h-px w-8 bg-line" />
                 <span>Who we are</span>
               </p>
@@ -129,9 +127,7 @@ function About() {
                 </div>
 
                 {/* Image index */}
-                <div className="absolute right-4 top-4">
-                  <span className="label-tech bg-background/90 px-3 py-2">01 / 02</span>
-                </div>
+                <div className="absolute right-4 top-4"></div>
               </div>
 
               {/* Technical caption */}
@@ -172,13 +168,18 @@ function About() {
 
       <section className="container-x section-y">
         <Reveal>
-          <SectionHeading index="03" eyebrow="Core values" title="What we hold ourselves to" />
+          <SectionHeading eyebrow="Core values" title="What we hold ourselves to" />
         </Reveal>
-        <ul className="mt-10 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {values.map((value, i) => (
-            <Reveal key={value} as="li" delay={i * 40} className="bg-background px-6 py-7">
-              <span className="label-tech text-accent">{String(i + 1).padStart(2, "0")}</span>
-              <p className="mt-3 text-lg font-semibold tracking-tight">{value}</p>
+            <Reveal
+              key={value}
+              as="li"
+              delay={i * 40}
+              className="group rounded-sm border border-line bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-lg"
+            >
+              <span className="mb-7 block h-1 w-8 bg-accent transition-all duration-300 group-hover:w-12" />
+              <p className="text-lg font-semibold tracking-tight">{value}</p>
             </Reveal>
           ))}
         </ul>
@@ -198,11 +199,11 @@ function About() {
           </Reveal>
           <div className="md:col-span-7">
             <Reveal>
-              <SectionHeading index="04" eyebrow="Health & safety" title="Safe sites, every day" />
+              <SectionHeading eyebrow="Health & safety" title="Safe sites, every day" />
             </Reveal>
             <Reveal delay={80}>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
-                Turiend Construction Limited maintains safe working environments for employees,
+                Turitrend Construction Limited maintains safe working environments for employees,
                 clients and the public. We follow safety regulations, use proper personal protective
                 equipment and keep safety awareness active throughout project operations.
               </p>
@@ -213,14 +214,18 @@ function About() {
 
       <section className="container-x section-y">
         <Reveal>
-          <SectionHeading index="05" eyebrow="Capability" title="Disciplines we cover" />
+          <SectionHeading eyebrow="Capability" title="Disciplines we cover" />
         </Reveal>
-        <div className="mt-10 grid gap-x-12 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
-            <Reveal key={s.slug} delay={i * 40} className="border-t border-line pt-5">
-              <span className="label-tech text-accent">{s.number}</span>
-              <h3 className="mt-3 text-lg font-semibold tracking-tight">{s.shortTitle}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.summary}</p>
+            <Reveal
+              key={s.slug}
+              delay={i * 40}
+              className="group rounded-sm border border-line bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-lg"
+            >
+              <span className="mb-7 block h-1 w-8 bg-accent transition-all duration-300 group-hover:w-12" />
+              <h3 className="text-lg font-semibold tracking-tight">{s.shortTitle}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.summary}</p>
             </Reveal>
           ))}
         </div>
@@ -229,18 +234,23 @@ function About() {
       <section className="bg-surface">
         <div className="container-x section-y">
           <Reveal>
-            <SectionHeading index="06" eyebrow="Clients" title="Who we work with" />
+            <SectionHeading eyebrow="Clients" title="Who we work with" />
           </Reveal>
-          <div className="mt-10 grid gap-x-12 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {clientTypes.map((c, i) => (
-              <Reveal key={c.title} delay={i * 40} className="border-t border-line pt-5">
+              <Reveal
+                key={c.title}
+                delay={i * 40}
+                className="group rounded-sm border border-line bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-lg"
+              >
+                <span className="mb-7 block h-1 w-8 bg-accent transition-all duration-300 group-hover:w-12" />
                 <h3 className="text-lg font-semibold tracking-tight">{c.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
               </Reveal>
             ))}
           </div>
           <div className="mt-16 grid gap-x-12 gap-y-8 md:grid-cols-3">
-            {whyTuriend.slice(0, 3).map((w) => (
+            {whyTuritrend.slice(0, 3).map((w) => (
               <div key={w.title} className="border-t border-line pt-5">
                 <h3 className="text-lg font-semibold tracking-tight">{w.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{w.text}</p>
@@ -253,7 +263,7 @@ function About() {
       <CtaBand
         title="Have a project in mind?"
         text="Tell us what you are planning and we will let you know what the works would involve."
-        whatsappMessage="Hello Turiend, I would like to discuss a construction project."
+        whatsappMessage="Hello Turitrend, I would like to discuss a construction project."
         context="about"
       />
     </>

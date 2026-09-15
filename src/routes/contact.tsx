@@ -81,7 +81,6 @@ function Contact() {
   return (
     <>
       <PageHero
-        index="01"
         eyebrow="Contact"
         title="Talk to Turitrend Construction Limited."
         intro="Call, message on WhatsApp or send the details of your project. We respond during working hours."
@@ -89,7 +88,7 @@ function Contact() {
 
       <section className="container-x section-y grid gap-12 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-5">
-          <SectionHeading index="02" eyebrow="Details" title={company.name} />
+          <SectionHeading eyebrow="Details" title={company.name} />
 
           <address className="mt-8 not-italic">
             <ul className="space-y-6">
@@ -153,7 +152,7 @@ function Contact() {
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <WhatsAppCta
-              message="Hello Turiend, I would like to discuss a construction project."
+              message="Hello Turitrend, I would like to discuss a construction project."
               variant="ink"
               context="contact_page"
             />
@@ -165,7 +164,7 @@ function Contact() {
         </div>
 
         <Reveal className="md:col-span-7">
-          <SectionHeading index="03" eyebrow="Message" title="Send us a message" />
+          <SectionHeading eyebrow="Message" title="Send us a message" />
 
           {sent ? (
             <div className="mt-8 border border-line bg-card p-8 md:p-10">
@@ -174,13 +173,13 @@ function Contact() {
               <h3 className="display-3 mt-4">Thank you, we have received your message.</h3>
 
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-                Your enquiry has been sent to the Turiend team. We will review the details and get
+                Your enquiry has been sent to the Turitrend team. We will review the details and get
                 back to you during working hours.
               </p>
 
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <WhatsAppCta
-                  message="Hello Turiend, I just sent a message through your website and would like to follow up."
+                  message="Hello Turitrend, I just sent a message through your website and would like to follow up."
                   variant="ink"
                   context="contact_confirmation"
                 />

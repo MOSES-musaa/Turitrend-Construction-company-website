@@ -10,7 +10,7 @@ export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
       {
-        title: "Construction Services in Kenya | Turiend Construction Limited",
+        title: "Construction Services in Kenya | Turitrend Construction Limited",
       },
       {
         name: "description",
@@ -19,7 +19,7 @@ export const Route = createFileRoute("/services/")({
       },
       {
         property: "og:title",
-        content: "Construction Services | Turiend Construction Limited",
+        content: "Construction Services | Turitrend Construction Limited",
       },
       {
         property: "og:description",
@@ -35,7 +35,6 @@ function ServicesIndex() {
   return (
     <>
       <PageHero
-        index="01"
         eyebrow="Services"
         title="Six core service areas."
         intro="Take one on its own, or combine several into a single scope with one team responsible for the result."
@@ -44,7 +43,7 @@ function ServicesIndex() {
       <section className="container-x section-y">
         <div className="mb-12 flex flex-col gap-5 border-b border-line pb-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="label-tech text-accent">02 / Our capabilities</p>
+            <p className="label-tech text-accent">Our capabilities</p>
             <h2 className="display-3 mt-3 max-w-2xl">
               Practical construction work, properly coordinated.
             </h2>
@@ -75,10 +74,6 @@ function ServicesIndex() {
                   />
 
                   <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-transparent to-transparent opacity-70" />
-
-                  <span className="label-tech absolute bottom-4 left-5 text-ink-foreground">
-                    {service.number}
-                  </span>
                 </div>
 
                 <div className="flex min-h-64 flex-col p-7 md:p-8">
