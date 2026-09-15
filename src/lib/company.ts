@@ -209,7 +209,7 @@ export const services: Service[] = [
     ],
     needs: [
       "A new boundary for a plot or completed house",
-      "Better privacy from neighbouring plots or the road",
+      "Better privacy from neighboring plots or the road",
       "Vehicle parking that needs shade and cover",
       "Automated access for a gate that is opened manually today",
     ],
@@ -239,7 +239,7 @@ export const services: Service[] = [
       },
       {
         q: "Which fence type is right for my property?",
-        a: "It depends on boundary length, privacy needs, the neighbouring properties and budget. We go through the options after seeing the site.",
+        a: "It depends on boundary length, privacy needs, the neighboring properties and budget. We go through the options after seeing the site.",
       },
     ],
     related: ["building-works", "road-electrical-water-works", "project-property-management"],
@@ -469,7 +469,7 @@ export const processSteps = [
   },
   {
     number: "04",
-    title: "Mobilise",
+    title: "Mobilize",
     text: "We prepare the resources and coordination required to begin the work.",
   },
   {

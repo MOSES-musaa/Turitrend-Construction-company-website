@@ -1,4 +1,4 @@
-import aboutTeam from "@/assets/about-team.jpg";
+import aboutTeam from "@/assets/aboutus1.jpg";
 import processPlanning from "@/assets/process-planning.jpg";
 import projectPlaceholderOne from "@/assets/project-placeholder-1.jpg";
 import projectPlaceholderTwo from "@/assets/project-placeholder-2.jpg";
