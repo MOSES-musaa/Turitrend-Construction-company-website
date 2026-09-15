@@ -95,12 +95,9 @@ export function SiteHeader() {
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="flex items-baseline gap-4 border-b border-line py-5 text-2xl font-semibold tracking-tight [&.active]:text-accent"
+                className="flex items-baseline border-b border-line py-5 text-2xl font-semibold tracking-tight [&.active]:text-accent"
                 activeOptions={{ exact: item.to === "/" }}
               >
-                <span className="label-tech text-muted-foreground">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
                 {item.label}
               </Link>
             ))}

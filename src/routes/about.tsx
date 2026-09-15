@@ -6,6 +6,7 @@ import { Reveal } from "@/components/site/reveal";
 import { SectionHeading } from "@/components/site/section-heading";
 import { clientTypes, company, services, whyTuriend } from "@/lib/company";
 import { aboutImage } from "@/lib/placeholders";
+import { TeamSection } from "@/components/site/team-section";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -48,7 +49,7 @@ function About() {
         intro="Turiend Construction Limited delivers building, civil, water and electrical works, perimeter and access works, biodigesters, and project and property management."
       />
 
-      <section className="container-x section-y">
+      <section className="container-x pt-16 pb-10 md:pt-24 md:pb-12">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-16">
           {/* Text */}
           <Reveal className="lg:col-span-5">
@@ -92,13 +93,6 @@ function About() {
                       Clear scope. Proper supervision. Accountable delivery.
                     </p>
                   </div>
-
-                  <span
-                    className="hidden text-4xl font-light text-muted-foreground/30 sm:block"
-                    aria-hidden="true"
-                  >
-                    01
-                  </span>
                 </div>
               </div>
             </div>
@@ -121,7 +115,7 @@ function About() {
                   width={1600}
                   height={1000}
                   loading="lazy"
-                  className="aspect-4/3 w-full object-cover transition-transform duration-1200 ease-out hover:scale-[1.02]"
+                  className="aspect-16/10 w-full object-cover transition-transform duration-1200 ease-out hover:scale-[1.02]"
                 />
 
                 {/* Image overlay */}
@@ -130,7 +124,7 @@ function About() {
                 {/* Image label */}
                 <div className="absolute bottom-4 left-4">
                   <span className="label-tech bg-ink/85 px-3 py-2 text-ink-foreground">
-                    Turiend Construction
+                    Turitrend Construction
                   </span>
                 </div>
 
@@ -155,6 +149,7 @@ function About() {
           </Reveal>
         </div>
       </section>
+      <TeamSection />
 
       <section className="bg-ink text-ink-foreground">
         <div className="container-x section-y grid gap-12 md:grid-cols-2">

@@ -33,9 +33,9 @@ export const projects: Project[] = [
 
   {
     slug: "biodigester1",
-    name: "Biodigester Project",
+    name: "Construction of Biodigester Katolani Machakos",
     category: "Biodigester",
-    location: "Kenya",
+    location: "Katolani, Machakos",
     description:
       "Biodigester installation and related construction works delivered by Turitrend Construction Limited.",
     scope: [],
@@ -50,22 +50,22 @@ export const projects: Project[] = [
 
   {
     slug: "building-project-1",
-    name: "Building Project 1",
+    name: "Blessed adoration Church Ruiru",
     category: "Building",
-    location: "Kenya",
+    location: "Buruburu,Nairobi",
     description:
       "Residential and structural construction works undertaken by Turitrend Construction Limited.",
     scope: [],
     servicesProvided: ["Building works"],
-    status: "Completed",
+    status: "In progress",
     images: getProjectImages("building-project-1"),
   },
 
   {
     slug: "building-project-2",
-    name: "Building Project 2",
+    name: "Construction of a 3 Bedroom Bungalow",
     category: "Building",
-    location: "Kenya",
+    location: "Githumu,Kenya",
     description: "Building and construction works undertaken by Turitrend Construction Limited.",
     scope: [],
     servicesProvided: ["Building works"],
@@ -74,38 +74,27 @@ export const projects: Project[] = [
   },
 
   {
-    slug: "building-project-3",
-    name: "Building Project 3",
-    category: "Building",
-    location: "Kenya",
-    description: "Building and construction works undertaken by Turitrend Construction Limited.",
-    scope: [],
-    servicesProvided: ["Building works"],
-    status: "Completed",
-    images: getProjectImages("building-project-3"),
-  },
-
-  {
     slug: "building-project-4",
-    name: "Building Project 4",
-    category: "Building",
-    location: "Kenya",
-    description: "Building and construction works undertaken by Turitrend Construction Limited.",
+    name: "Mwihoko 5-storey apartment building",
+    category: "Project Management",
+    location: "Mwihoko,Kiambu",
+    description:
+      "Turiend provided project management services for the construction of a five-storey apartment development in MWihoko,overseeing project coordination and management requirements to support effective execution and delivery.",
     scope: [],
-    servicesProvided: ["Building works"],
+    servicesProvided: ["Project management"],
     status: "Completed",
     images: getProjectImages("building-project-4"),
   },
 
   {
     slug: "building-project-5",
-    name: "Building Project 5",
+    name: "Proposed Multi-dwelling Residential Development",
     category: "Building",
-    location: "Kenya",
+    location: "Kamulu, Nairobi",
     description: "Building and construction works undertaken by Turitrend Construction Limited.",
     scope: [],
     servicesProvided: ["Building works"],
-    status: "Completed",
+    status: "In progress",
     images: getProjectImages("building-project-5"),
   },
 
@@ -131,10 +120,11 @@ export const projects: Project[] = [
 
   {
     slug: "fences1",
-    name: "Fencing Project",
+    name: "Privacy Fencing Loresho",
     category: "Fences",
-    location: "Kenya",
-    description: "Fencing works delivered by Turiend Construction Limited.",
+    location: "Loresho, Nairobi",
+    description:
+      "Fencing works delivered by Turiend Construction Limited providing a practical boundary solution that enhances privacy, security and the overall appearance of the property.",
     scope: [],
     servicesProvided: ["Fencing"],
     status: "Completed",
@@ -147,9 +137,9 @@ export const projects: Project[] = [
 
   {
     slug: "home-renovation1",
-    name: "Home Renovation Project 1",
+    name: "Fixing floor-Boards",
     category: "Home Renovations",
-    location: "Kenya",
+    location: "Loresho, Nairobi",
     description: "Home renovation and improvement works delivered by Turiend Construction Limited.",
     scope: [],
     servicesProvided: ["Home renovations"],
@@ -159,9 +149,9 @@ export const projects: Project[] = [
 
   {
     slug: "home-renovation2",
-    name: "Home Renovation Project 2",
+    name: "Kikuyu Ondiri House Renovation",
     category: "Home Renovations",
-    location: "Kenya",
+    location: "Kikuyu, Nairobi",
     description: "Home renovation and improvement works delivered by Turiend Construction Limited.",
     scope: [],
     servicesProvided: ["Home renovations"],
@@ -171,9 +161,9 @@ export const projects: Project[] = [
 
   {
     slug: "home-renovation3",
-    name: "Home Renovation Project 3",
+    name: "Loresho Maisonette Renovation and Painting works",
     category: "Home Renovations",
-    location: "Kenya",
+    location: "Loresho, Nairobi",
     description: "Home renovation and improvement works delivered by Turiend Construction Limited.",
     scope: [],
     servicesProvided: ["Home renovations"],
@@ -183,9 +173,9 @@ export const projects: Project[] = [
 
   {
     slug: "home-renovation4",
-    name: "Home Renovation Project 4",
+    name: "32 Bedsitters and 2 Commercial Units Renovation",
     category: "Home Renovations",
-    location: "Kenya",
+    location: "Kirwara, Gatanga",
     description: "Home renovation and improvement works delivered by Turiend Construction Limited.",
     scope: [],
     servicesProvided: ["Home renovations"],
@@ -195,10 +185,11 @@ export const projects: Project[] = [
 
   {
     slug: "home-renovation5",
-    name: "Home Renovation Project 5",
+    name: "Silage Bunkers Rehabilitation",
     category: "Home Renovations",
-    location: "Kenya",
-    description: "Home renovation and improvement works delivered by Turiend Construction Limited.",
+    location: "Isinya, Kajiado",
+    description:
+      "Turiend carried out rehabilitation works on silage bunkers in Isinya, focusing on restoring and improving the existing structures for continued practical use.",
     scope: [],
     servicesProvided: ["Home renovations"],
     status: "Completed",
@@ -211,9 +202,9 @@ export const projects: Project[] = [
 
   {
     slug: "infrastructure1",
-    name: "Infrastructure Project 1",
+    name: "Pergola,Balcony Canopies, Balustrades and Garage door automation ",
     category: "Infrastructure",
-    location: "Kenya",
+    location: "Makuyu, Murang'a",
     description:
       "Infrastructure construction and improvement works delivered by Turiend Construction Limited.",
     scope: [],
@@ -224,9 +215,9 @@ export const projects: Project[] = [
 
   {
     slug: "infrastructure2",
-    name: "Infrastructure Project 2",
+    name: "Prefabricated Steel Fascia Boards and External Painting Works",
     category: "Infrastructure",
-    location: "Kenya",
+    location: "Isinya, Kajiado",
     description:
       "Infrastructure construction and improvement works delivered by Turiend Construction Limited.",
     scope: [],
@@ -237,9 +228,9 @@ export const projects: Project[] = [
 
   {
     slug: "infrastructure3",
-    name: "Infrastructure Project 3",
+    name: "Rehabilitation Of Cabro works at MUhazi Farm",
     category: "Infrastructure",
-    location: "Kenya",
+    location: "Isinya, Kajiado",
     description:
       "Infrastructure construction and improvement works delivered by Turiend Construction Limited.",
     scope: [],

@@ -14,7 +14,7 @@ export const Route = createFileRoute("/how-we-work")({
       {
         name: "description",
         content:
-          "Our six-step project journey: understand, assess, plan and cost, mobilise, execute and supervise, complete and hand over.",
+          "Our six-step project journey: understand, assess, plan and cost, mobilize, execute and supervise, complete and hand over.",
       },
       { property: "og:title", content: "How We Work | Turiend Construction Limited" },
       {
@@ -41,7 +41,7 @@ const detail: Record<string, string[]> = {
     "Where there are options — materials, phasing, specification — we put the cost difference in front of you rather than deciding for you.",
   ],
   "04": [
-    "Resources, materials and the trades required are organised before work starts on site.",
+    "Resources, materials and the trades required are organized before work starts on site.",
     "Site setup and any temporary arrangements are agreed with you.",
   ],
   "05": [
@@ -107,9 +107,6 @@ function HowWeWork() {
                   loading="lazy"
                   className="aspect-4/3 w-full object-cover"
                 />
-                <span className="label-tech absolute right-3 bottom-3 bg-ink/85 px-2 py-1 text-ink-foreground">
-                  Illustrative image
-                </span>
               </div>
               <img
                 src={blueprint}
