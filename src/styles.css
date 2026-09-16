@@ -7,8 +7,7 @@
 /*
  * TURIEND CONSTRUCTION — design system
  *
- * Architectural palette: graphite ink, structural blue (from the company mark),
- * warm limestone neutrals and a single copper accent.
+ * Architectural palette: hyper cobalt, powder sky and deep blue-black ink.
  * Type: Archivo (editorial headings) + IBM Plex Sans (technical body).
  */
 
@@ -65,53 +64,52 @@
 :root {
   --radius: 0.25rem;
 
-  /* Neutrals — warm limestone */
-  --background: oklch(0.976 0.004 85);
-  --foreground: oklch(0.19 0.012 255);
-  --surface: oklch(0.955 0.006 85);
-  --surface-2: oklch(0.925 0.008 85);
-  --line: oklch(0.87 0.008 85);
+  /* Powder Sky surfaces with Hyper Cobalt interaction states */
+  --background: #ffffff;
+  --foreground: #071536;
+  --surface: #d6e3ff;
+  --surface-2: #b9cefa;
+  --line: #b8c9e8;
 
-  /* Dark architectural ink */
-  --ink: oklch(0.205 0.016 255);
-  --ink-foreground: oklch(0.965 0.004 85);
-  --ink-muted: oklch(0.72 0.012 255);
-  --ink-line: oklch(1 0 0 / 14%);
+  /* Deep blue-black architectural ink */
+  --ink: #071536;
+  --ink-foreground: #f8fbff;
+  --ink-muted: #b9c9e8;
+  --ink-line: rgb(214 227 255 / 22%);
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.19 0.012 255);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.19 0.012 255);
+  --card: #ffffff;
+  --card-foreground: #071536;
+  --popover: #ffffff;
+  --popover-foreground: #071536;
 
-  /* Structural blue, taken from the company mark */
-  --primary: oklch(0.38 0.13 258);
-  --primary-foreground: oklch(0.98 0.004 85);
+  /* Hyper Cobalt brand color */
+  --primary: #0038ff;
+  --primary-foreground: #ffffff;
 
-  --secondary: oklch(0.94 0.007 85);
-  --secondary-foreground: oklch(0.23 0.014 255);
+  --secondary: #d6e3ff;
+  --secondary-foreground: #071536;
 
-  --muted: oklch(0.945 0.006 85);
-  --muted-foreground: oklch(0.475 0.012 255);
+  --muted: #edf3ff;
+  --muted-foreground: #405277;
 
-  /* Copper accent — used sparingly */
-  --accent: oklch(0.585 0.135 47);
-  --accent-foreground: oklch(0.985 0.004 85);
+  --accent: #0038ff;
+  --accent-foreground: #ffffff;
 
-  --destructive: oklch(0.523 0.19 27);
-  --destructive-foreground: oklch(0.985 0.004 85);
+  --destructive: #c62828;
+  --destructive-foreground: #ffffff;
 
-  --border: oklch(0.87 0.008 85);
-  --input: oklch(0.85 0.008 85);
-  --ring: oklch(0.38 0.13 258);
+  --border: #b8c9e8;
+  --input: #a8bce2;
+  --ring: #0038ff;
 
-  --sidebar: oklch(0.955 0.006 85);
-  --sidebar-foreground: oklch(0.19 0.012 255);
-  --sidebar-primary: oklch(0.38 0.13 258);
-  --sidebar-primary-foreground: oklch(0.98 0.004 85);
-  --sidebar-accent: oklch(0.925 0.008 85);
-  --sidebar-accent-foreground: oklch(0.23 0.014 255);
-  --sidebar-border: oklch(0.87 0.008 85);
-  --sidebar-ring: oklch(0.38 0.13 258);
+  --sidebar: #d6e3ff;
+  --sidebar-foreground: #071536;
+  --sidebar-primary: #0038ff;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #b9cefa;
+  --sidebar-accent-foreground: #071536;
+  --sidebar-border: #b8c9e8;
+  --sidebar-ring: #0038ff;
 }
 
 @layer base {

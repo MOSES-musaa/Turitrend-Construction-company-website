@@ -214,7 +214,7 @@ function About() {
               />
               <div className="relative">
                 {(() => {
-                  const Icon = valueIcons[i];
+                  const Icon = valueIcons[i] ?? ShieldCheck;
                   return (
                     <div className="mb-7 flex size-10 items-center justify-center border border-accent/25 bg-accent/10 text-accent transition-all duration-300 group-hover:border-accent/50 group-hover:bg-accent group-hover:text-accent-foreground">
                       <Icon
