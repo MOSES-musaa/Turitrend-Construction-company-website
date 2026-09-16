@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo1.png";
 import { cn } from "@/lib/utils";
 import { CtaLink } from "./cta";
 import { navItems } from "@/lib/navigation";
