@@ -32,8 +32,8 @@ export const Route = createFileRoute("/services/$slug")({
     const service = loaderData?.service;
 
     const title = service
-      ? `${service.title} | Turitrend Construction Limited`
-      : "Service | Turitrend Construction Limited";
+      ? `${service.title} | Turiend Construction Limited`
+      : "Service | Turiend Construction Limited";
 
     const description = service?.summary ?? "Construction services in Kenya.";
 
@@ -57,7 +57,7 @@ function ServiceDetail() {
     .map((slug) => services.find((s) => s.slug === slug))
     .filter((s): s is (typeof services)[number] => Boolean(s));
 
-  const whatsappMessage = `Hello Turitrend, I am interested in your ${service.shortTitle} services and would like to discuss my project.`;
+  const whatsappMessage = `Hello Turiend, I am interested in your ${service.shortTitle} services and would like to discuss my project.`;
 
   useEffect(() => {
     track("service_view", {

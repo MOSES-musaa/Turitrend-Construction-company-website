@@ -1,18 +1,18 @@
 /**
- * cspell:ignore Turitrend
+ * cspell:ignore Turiend
  * Single source of factual company information.
- * Only details supplied by Turitrend Construction Limited are stored here.
+ * Only details supplied by Turiend Construction Limited are stored here.
  */
 
 export const company = {
-  name: "Turitrend Construction Limited",
-  shortName: "Turitrend",
+  name: "Turiend Construction Limited",
+  shortName: "Turiend",
   tagline: "From concept to creation",
   phone: "+254 727 233 041",
   phoneHref: "tel:+254727233041",
   whatsappNumber: "254727233041",
-  email: "turitrendconstruction@gmail.com",
-  emailHref: "mailto:turitrendconstruction@gmail.com",
+  email: "turiendconstruction@gmail.com",
+  emailHref: "mailto:turiendconstruction@gmail.com",
   location: "Nairobi, Kenya",
   postal: "P.O. Box 317 – 10106, Othaya",
 } as const;
@@ -22,7 +22,7 @@ export function whatsappLink(message: string) {
 }
 
 export const defaultWhatsappMessage =
-  "Hello Turitrend, I would like to discuss a construction project.";
+  "Hello Turiend, I would like to discuss a construction project.";
 
 export type ServiceSlug =
   | "home-improvements-renovations"
@@ -484,7 +484,7 @@ export const processSteps = [
   },
 ];
 
-export const whyTuritrend = [
+export const whyTuriend = [
   {
     title: "Multi-disciplinary capability",
     text: "Building, civil, water and electrical disciplines under one service structure, rather than four separate contracts.",
@@ -568,7 +568,7 @@ export type Faq = { category: string; q: string; a: string };
 export const generalFaqs: Faq[] = [
   {
     category: "Quotations",
-    q: "How do I get a quotation from Turitrend?",
+    q: "How do I get a quotation from Turiend?",
     a: "Send your project details through the Request a Quote form, WhatsApp or a phone call. For most works we arrange a site visit before quoting, because pricing without seeing the site is guesswork.",
   },
   {
@@ -583,7 +583,7 @@ export const generalFaqs: Faq[] = [
   },
   {
     category: "Building Works",
-    q: "Can Turitrend take a building project from groundworks to completion?",
+    q: "Can Turiend take a building project from groundworks to completion?",
     a: "Yes. Building works can be handled through the different stages — groundworks, structure, roofing and finishes — according to the agreed scope.",
   },
   {
@@ -648,12 +648,12 @@ export const generalFaqs: Faq[] = [
   },
   {
     category: "Working with us",
-    q: "Where does Turitrend work?",
+    q: "Where does Turiend work?",
     a: "We are based in Nairobi, Kenya and take on work in Nairobi and the surrounding counties. Tell us your location and we will confirm whether we can cover it.",
   },
   {
     category: "Working with us",
-    q: "How do I contact Turitrend?",
+    q: "How do I contact Turiend?",
     a: `Call ${company.phone}, message the same number on WhatsApp, or email ${company.email}.`,
   },
 ];

@@ -10,17 +10,17 @@ import { processImage } from "@/lib/placeholders";
 export const Route = createFileRoute("/how-we-work")({
   head: () => ({
     meta: [
-      { title: "How We Work | Turitrend Construction Limited" },
+      { title: "How We Work | Turiend Construction Limited" },
       {
         name: "description",
         content:
           "Our six-step project journey: understand, assess, plan and cost, mobilize, execute and supervise, complete and hand over.",
       },
-      { property: "og:title", content: "How We Work | Turitrend Construction Limited" },
+      { property: "og:title", content: "How We Work | Turiend Construction Limited" },
       {
         property: "og:description",
         content:
-          "The six steps a Turitrend project moves through, from first conversation to handover.",
+          "The six steps a Turiend project moves through, from first conversation to handover.",
       },
     ],
   }),

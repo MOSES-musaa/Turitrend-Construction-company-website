@@ -10,7 +10,7 @@ export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
       {
-        title: "Construction Services in Kenya | Turitrend Construction Limited",
+        title: "Construction Services in Kenya | Turiend Construction Limited",
       },
       {
         name: "description",
@@ -19,7 +19,7 @@ export const Route = createFileRoute("/services/")({
       },
       {
         property: "og:title",
-        content: "Construction Services | Turitrend Construction Limited",
+        content: "Construction Services | Turiend Construction Limited",
       },
       {
         property: "og:description",

@@ -18,15 +18,15 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/quote")({
   head: () => ({
     meta: [
-      { title: "Request a Quote | Turitrend Construction Limited" },
+      { title: "Request a Quote | Turiend Construction Limited" },
       {
         name: "description",
         content:
-          "Tell Turitrend Construction about your project — building, renovations, fencing, biodigesters, road, electrical or water works — and receive a considered response.",
+          "Tell Turiend Construction about your project — building, renovations, fencing, biodigesters, road, electrical or water works — and receive a considered response.",
       },
       {
         property: "og:title",
-        content: "Request a Quote | Turitrend Construction Limited",
+        content: "Request a Quote | Turiend Construction Limited",
       },
       {
         property: "og:description",
@@ -189,7 +189,7 @@ function QuotePage() {
               <h2 className="display-3 mt-4">Thank you, {form.name.split(" ")[0]}.</h2>
 
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-                Your quote request has been sent successfully to the Turitrend team. We have the
+                Your quote request has been sent successfully to the Turiend team. We have the
                 project details below and will review them before getting back to you.
               </p>
 
@@ -200,7 +200,7 @@ function QuotePage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href={whatsappLink(
-                    `Hello Turitrend, I have just submitted a quote request through your website.\n\n${summary}`,
+                    `Hello Turiend, I have just submitted a quote request through your website.\n\n${summary}`,
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -423,7 +423,7 @@ function QuotePage() {
                     <p className="text-xl font-semibold tracking-tight">Review your enquiry.</p>
 
                     <p className="mt-2 text-sm text-muted-foreground">
-                      Check the summary below before sending it to the Turitrend team.
+                      Check the summary below before sending it to the Turiend team.
                     </p>
 
                     <pre className="mt-5 overflow-x-auto border border-line bg-surface p-5 font-mono text-xs leading-relaxed whitespace-pre-wrap">

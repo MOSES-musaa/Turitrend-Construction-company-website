@@ -4,7 +4,7 @@ import { WhatsAppCta } from "./whatsapp-button";
 export function CtaBand({
   title = "Tell us what you are planning.",
   text = "Send us the details of your project and we will come back to you on scope, next steps and what a quotation would need.",
-  whatsappMessage = "Hello Turitrend, I would like to discuss a construction project.",
+  whatsappMessage = "Hello Turiend, I would like to discuss a construction project.",
   context = "cta_band",
 }: {
   title?: string;

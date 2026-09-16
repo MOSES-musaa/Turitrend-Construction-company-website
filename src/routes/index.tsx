@@ -1,6 +1,21 @@
 /* eslint-disable prettier/prettier */
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  ArrowUpRight,
+  BadgeCheck,
+  BriefcaseBusiness,
+  Building2,
+  ClipboardList,
+  GitBranch,
+  HardHat,
+  House,
+  Layers3,
+  MessageSquareText,
+  PiggyBank,
+  ShieldCheck,
+} from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import heroImage from "@/assets/hero-architecture.jpg";
 import heroConstruction from "@/assets/hero-construction.jpg";
@@ -17,20 +32,23 @@ import {
   processSteps,
   projectFinder,
   services,
-  whyTuritrend,
+  whyTuriend,
 } from "@/lib/company";
 import { track } from "@/lib/analytics";
+
+const clientIcons = [House, Building2, HardHat, BriefcaseBusiness, ClipboardList];
+const whyIcons = [Layers3, GitBranch, MessageSquareText, BadgeCheck, PiggyBank, ShieldCheck];
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Turitrend Construction Limited | Construction Company in Kenya" },
+      { title: "Turiend Construction Limited | Construction Company in Kenya" },
       {
         name: "description",
         content:
-          "Building works, renovations, fencing and gate automation, biodigesters, road, electrical and water works, and project management across Kenya. Request a quote from Turitrend.",
+          "Building works, renovations, fencing and gate automation, biodigesters, road, electrical and water works, and project management across Kenya. Request a quote from Turiend.",
       },
-      { property: "og:title", content: "Turitrend Construction Limited | Construction in Kenya" },
+      { property: "og:title", content: "Turiend Construction Limited | Construction in Kenya" },
       {
         property: "og:description",
         content:
@@ -54,7 +72,7 @@ function Home() {
               <span>{company.location}</span>
             </p>
             <h1 className="display-1 mt-6">
-              Turitrend Construction
+              Turiend Construction
               <span className="block text-accent">Limited</span>
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink-foreground/85 md:text-xl">
@@ -112,7 +130,7 @@ function Home() {
 
         <div className="mt-7 max-w-xl space-y-5 text-base leading-8 text-muted-foreground">
           <p>
-            Turitrend Construction Limited is a Kenyan construction company.
+            Turiend Construction Limited is a Kenyan construction company.
             We take on building and civil works, water and electrical
             installations, perimeter and access works, biodigesters, and
             the management of projects and properties.
@@ -140,7 +158,7 @@ function Home() {
           to="/about"
           className="group mt-8 inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-accent"
         >
-          More about Turitrend
+          More about Turiend
           <ArrowRight
             className="size-4 transition-transform group-hover:translate-x-1"
             aria-hidden="true"
@@ -182,7 +200,7 @@ function Home() {
           {/* Image label */}
           <div className="absolute bottom-4 left-4">
             <span className="label-tech bg-ink/85 px-3 py-2 text-ink-foreground">
-              Turitrend Construction
+              Turiend Construction
             </span>
           </div>
 
@@ -320,17 +338,37 @@ function Home() {
         <Reveal>
           <SectionHeading eyebrow="Who we work with" title="Clients we can serve" />
         </Reveal>
-        <div className="mt-10 grid gap-px border border-line bg-line md:mt-14 md:grid-cols-3">
-          {clientTypes.map((client, i) => (
-            <Reveal key={client.title} delay={i * 50} className="bg-background p-7 md:p-8">
-              <h3 className="text-lg font-semibold tracking-tight">{client.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{client.text}</p>
-            </Reveal>
-          ))}
-          <div className="hidden bg-surface p-8 md:block lg:col-span-1">
+        <div className="mt-10 grid gap-4 md:mt-14 md:grid-cols-3">
+          {clientTypes.map((client, i) => {
+            const Icon = clientIcons[i];
+
+            return (
+              <Reveal
+                key={client.title}
+                delay={i * 50}
+                className="group relative overflow-hidden border border-line bg-background p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:bg-card hover:shadow-xl md:p-8"
+              >
+                <div
+                  aria-hidden="true"
+                  className="absolute -right-8 -bottom-8 size-28 rounded-full bg-accent/5 transition-transform duration-500 group-hover:scale-150"
+                />
+                <div className="relative">
+                  <div className="flex size-11 items-center justify-center border border-accent/25 bg-accent/10 text-accent transition-all duration-300 group-hover:border-accent/50 group-hover:bg-accent group-hover:text-accent-foreground">
+                    <Icon
+                      className="size-5 transition-transform duration-300 group-hover:scale-110"
+                      strokeWidth={1.8}
+                    />
+                  </div>
+                  <h3 className="mt-7 text-lg font-semibold tracking-tight">{client.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{client.text}</p>
+                </div>
+              </Reveal>
+            );
+          })}
+          <div className="hidden border border-line bg-surface p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl md:block lg:col-span-1">
             <p className="label-tech text-muted-foreground">Not sure where you fit?</p>
             <WhatsAppCta
-              message="Hello Turitrend, I would like to discuss a construction project."
+              message="Hello Turiend, I would like to discuss a construction project."
               label="Ask us on WhatsApp"
               variant="quiet"
               size="sm"
@@ -341,24 +379,44 @@ function Home() {
         </div>
       </section>
 
-      {/* WHY TURITREND */}
+      {/* WHY TURIEND */}
       <section className="bg-surface">
         <div className="container-x section-y">
           <Reveal>
             <SectionHeading
-              eyebrow="Why Turitrend"
+              eyebrow="Why Turiend"
               align="split"
               title="What working with us actually gives you"
               intro="FROM CONCEPT TO CREATION."
             />
           </Reveal>
-          <div className="mt-12 grid gap-x-12 gap-y-10 md:mt-16 md:grid-cols-2 lg:grid-cols-3">
-            {whyTuritrend.map((item, i) => (
-              <Reveal key={item.title} delay={i * 50} className="border-t border-line pt-6">
-                <h3 className="text-lg font-semibold tracking-tight">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
-              </Reveal>
-            ))}
+          <div className="mt-12 grid gap-4 md:mt-16 md:grid-cols-2 lg:grid-cols-3">
+            {whyTuriend.map((item, i) => {
+              const Icon = whyIcons[i];
+
+              return (
+                <Reveal
+                  key={item.title}
+                  delay={i * 50}
+                  className="group relative overflow-hidden border border-line bg-background p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-xl md:p-8"
+                >
+                  <div
+                    aria-hidden="true"
+                    className="absolute -right-8 -bottom-8 size-28 rounded-full bg-accent/5 transition-transform duration-500 group-hover:scale-150"
+                  />
+                  <div className="relative">
+                    <div className="flex size-11 items-center justify-center border border-accent/25 bg-accent/10 text-accent transition-all duration-300 group-hover:border-accent/50 group-hover:bg-accent group-hover:text-accent-foreground">
+                      <Icon
+                        className="size-5 transition-transform duration-300 group-hover:scale-110"
+                        strokeWidth={1.8}
+                      />
+                    </div>
+                    <h3 className="mt-7 text-lg font-semibold tracking-tight">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+                  </div>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -411,7 +469,7 @@ function HeroCarousel() {
       className="absolute inset-0 overflow-hidden"
       role="region"
       aria-roledescription="carousel"
-      aria-label="Turitrend Construction highlights"
+      aria-label="Turiend Construction highlights"
     >
       {/* Slides */}
       {heroSlides.map((slide, i) => (

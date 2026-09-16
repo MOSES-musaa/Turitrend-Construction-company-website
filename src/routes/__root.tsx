@@ -86,14 +86,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Turitrend Construction Limited | Building & Civil Works, Kenya" },
+      { title: "Turiend Construction Limited | Building & Civil Works, Kenya" },
       {
         name: "description",
         content:
-          "Turitrend Construction Limited — building works, renovations, fencing and gates, biodigesters, road, electrical and water works, and project management in Kenya.",
+          "Turiend Construction Limited — building works, renovations, fencing and gates, biodigesters, road, electrical and water works, and project management in Kenya.",
       },
-      { name: "author", content: "Turitrend Construction Limited" },
-      { property: "og:site_name", content: "Turitrend Construction Limited" },
+      { name: "author", content: "Turiend Construction Limited" },
+      { property: "og:site_name", content: "Turiend Construction Limited" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#1d2027" },

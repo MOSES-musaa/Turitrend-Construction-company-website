@@ -12,16 +12,16 @@ import { ProjectCard } from "@/components/site/project-card";
 export const Route = createFileRoute("/projects/")({
   head: () => ({
     meta: [
-      { title: "Projects | Turitrend Construction Limited" },
+      { title: "Projects | Turiend Construction Limited" },
       {
         name: "description",
         content:
-          "Turitrend Construction project showcases are being documented. In the meantime, tell us about your project and we will discuss comparable work directly.",
+          "Turiend Construction project showcases are being documented. In the meantime, tell us about your project and we will discuss comparable work directly.",
       },
-      { property: "og:title", content: "Projects | Turitrend Construction Limited" },
+      { property: "og:title", content: "Projects | Turiend Construction Limited" },
       {
         property: "og:description",
-        content: "Project showcases from Turitrend Construction Limited, currently being documented.",
+        content: "Project showcases from Turiend Construction Limited, currently being documented.",
       },
     ],
   }),
@@ -38,7 +38,7 @@ function Projects() {
       <PageHero
         eyebrow="Projects"
         title="Project showcases are being documented."
-        intro="Rather than fill this page with images that are not ours, we are preparing proper documentation and photography of completed Turitrend works. It will be published here as it is ready."
+        intro="Rather than fill this page with images that are not ours, we are preparing proper documentation and photography of completed Turiend works. It will be published here as it is ready."
       />
 
       <section className="container-x section-y">
@@ -80,7 +80,7 @@ function Projects() {
       <CtaBand
         title="Ask about work we have done."
         text="Tell us the kind of project you are planning and we will discuss relevant experience with you directly."
-        whatsappMessage="Hello Turitrend, I would like to ask about projects you have completed."
+        whatsappMessage="Hello Turiend, I would like to ask about projects you have completed."
         context="projects"
       />
     </>

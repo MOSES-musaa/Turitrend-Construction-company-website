@@ -1,27 +1,42 @@
 import { createFileRoute } from "@tanstack/react-router";
+import {
+  BadgeCheck,
+  BriefcaseBusiness,
+  Building2,
+  CheckCircle2,
+  ClipboardCheck,
+  HardHat,
+  Lightbulb,
+  MessageSquareText,
+  Ruler,
+  ShieldCheck,
+  Sparkles,
+  UsersRound,
+  Wrench,
+} from "lucide-react";
 import concrete from "@/assets/texture-concrete.jpg";
 import { CtaBand } from "@/components/site/cta-band";
 import { PageHero } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { SectionHeading } from "@/components/site/section-heading";
-import { clientTypes, company, services, whyTuritrend } from "@/lib/company";
+import { clientTypes, company, services, whyTuriend } from "@/lib/company";
 import { aboutImage } from "@/lib/placeholders";
 import { TeamSection } from "@/components/site/team-section";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Turitrend Construction Limited | Nairobi, Kenya" },
+      { title: "About Turiend Construction Limited | Nairobi, Kenya" },
       {
         name: "description",
         content:
-          "Turitrend Construction Limited is a Kenyan construction company covering building, civil, water and electrical works, perimeter works, biodigesters and project management.",
+          "Turiend Construction Limited is a Kenyan construction company covering building, civil, water and electrical works, perimeter works, biodigesters and project management.",
       },
-      { property: "og:title", content: "About Turitrend Construction Limited" },
+      { property: "og:title", content: "About Turiend Construction Limited" },
       {
         property: "og:description",
         content:
-          "Who Turitrend is, how we work with clients, and the disciplines we cover across Kenya.",
+          "Who Turiend is, how we work with clients, and the disciplines we cover across Kenya.",
       },
     ],
   }),
@@ -39,13 +54,28 @@ const values = [
   "Safety",
 ];
 
+const valueIcons = [
+  ShieldCheck,
+  BadgeCheck,
+  Sparkles,
+  ClipboardCheck,
+  Lightbulb,
+  UsersRound,
+  MessageSquareText,
+  HardHat,
+];
+
+const serviceIcons = [Building2, Ruler, Wrench, ShieldCheck, HardHat, ClipboardCheck];
+const clientIcons = [Building2, UsersRound, Ruler, BriefcaseBusiness, ClipboardCheck];
+const principleIcons = [UsersRound, BadgeCheck, CheckCircle2];
+
 function About() {
   return (
     <>
       <PageHero
         eyebrow="About"
         title="A Kenyan construction company built around clear scope and proper supervision."
-        intro="Turitrend Construction Limited delivers building, civil, water and electrical works, perimeter and access works, biodigesters, and project and property management."
+        intro="Turiend Construction Limited delivers building, civil, water and electrical works, perimeter and access works, biodigesters, and project and property management."
       />
 
       <section className="container-x pt-16 pb-10 md:pt-24 md:pb-12">
@@ -122,7 +152,7 @@ function About() {
                 {/* Image label */}
                 <div className="absolute bottom-4 left-4">
                   <span className="label-tech bg-ink/85 px-3 py-2 text-ink-foreground">
-                    Turitrend Construction
+                    Turiend Construction
                   </span>
                 </div>
 
@@ -176,10 +206,26 @@ function About() {
               key={value}
               as="li"
               delay={i * 40}
-              className="group rounded-sm border border-line bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-lg"
+              className="group relative overflow-hidden rounded-sm border border-line bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-lg"
             >
-              <span className="mb-7 block h-1 w-8 bg-accent transition-all duration-300 group-hover:w-12" />
-              <p className="text-lg font-semibold tracking-tight">{value}</p>
+              <div
+                aria-hidden="true"
+                className="absolute -right-8 -bottom-8 size-24 rounded-full bg-accent/5 transition-transform duration-500 group-hover:scale-150"
+              />
+              <div className="relative">
+                {(() => {
+                  const Icon = valueIcons[i];
+                  return (
+                    <div className="mb-7 flex size-10 items-center justify-center border border-accent/25 bg-accent/10 text-accent transition-all duration-300 group-hover:border-accent/50 group-hover:bg-accent group-hover:text-accent-foreground">
+                      <Icon
+                        className="size-4.5 transition-transform duration-300 group-hover:scale-110"
+                        strokeWidth={1.8}
+                      />
+                    </div>
+                  );
+                })()}
+                <p className="text-lg font-semibold tracking-tight">{value}</p>
+              </div>
             </Reveal>
           ))}
         </ul>
@@ -203,7 +249,7 @@ function About() {
             </Reveal>
             <Reveal delay={80}>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
-                Turitrend Construction Limited maintains safe working environments for employees,
+                Turiend Construction Limited maintains safe working environments for employees,
                 clients and the public. We follow safety regulations, use proper personal protective
                 equipment and keep safety awareness active throughout project operations.
               </p>
@@ -221,11 +267,27 @@ function About() {
             <Reveal
               key={s.slug}
               delay={i * 40}
-              className="group rounded-sm border border-line bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-lg"
+              className="group relative overflow-hidden rounded-sm border border-line bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-lg"
             >
-              <span className="mb-7 block h-1 w-8 bg-accent transition-all duration-300 group-hover:w-12" />
-              <h3 className="text-lg font-semibold tracking-tight">{s.shortTitle}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.summary}</p>
+              <div
+                aria-hidden="true"
+                className="absolute -right-8 -bottom-8 size-28 rounded-full bg-accent/5 transition-transform duration-500 group-hover:scale-150"
+              />
+              <div className="relative">
+                {(() => {
+                  const Icon = serviceIcons[i];
+                  return (
+                    <div className="mb-7 flex size-11 items-center justify-center border border-accent/25 bg-accent/10 text-accent transition-all duration-300 group-hover:border-accent/50 group-hover:bg-accent group-hover:text-accent-foreground">
+                      <Icon
+                        className="size-5 transition-transform duration-300 group-hover:scale-110"
+                        strokeWidth={1.8}
+                      />
+                    </div>
+                  );
+                })()}
+                <h3 className="text-lg font-semibold tracking-tight">{s.shortTitle}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.summary}</p>
+              </div>
             </Reveal>
           ))}
         </div>
@@ -241,21 +303,56 @@ function About() {
               <Reveal
                 key={c.title}
                 delay={i * 40}
-                className="group rounded-sm border border-line bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-lg"
+                className="group relative overflow-hidden rounded-sm border border-line bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-lg"
               >
-                <span className="mb-7 block h-1 w-8 bg-accent transition-all duration-300 group-hover:w-12" />
-                <h3 className="text-lg font-semibold tracking-tight">{c.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
+                <div
+                  aria-hidden="true"
+                  className="absolute -right-8 -bottom-8 size-28 rounded-full bg-accent/5 transition-transform duration-500 group-hover:scale-150"
+                />
+                <div className="relative">
+                  {(() => {
+                    const Icon = clientIcons[i];
+                    return (
+                      <div className="mb-7 flex size-11 items-center justify-center border border-accent/25 bg-accent/10 text-accent transition-all duration-300 group-hover:border-accent/50 group-hover:bg-accent group-hover:text-accent-foreground">
+                        <Icon
+                          className="size-5 transition-transform duration-300 group-hover:scale-110"
+                          strokeWidth={1.8}
+                        />
+                      </div>
+                    );
+                  })()}
+                  <h3 className="text-lg font-semibold tracking-tight">{c.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
+                </div>
               </Reveal>
             ))}
           </div>
           <div className="mt-16 grid gap-x-12 gap-y-8 md:grid-cols-3">
-            {whyTuritrend.slice(0, 3).map((w) => (
-              <div key={w.title} className="border-t border-line pt-5">
-                <h3 className="text-lg font-semibold tracking-tight">{w.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{w.text}</p>
-              </div>
-            ))}
+            {whyTuriend.slice(0, 3).map((w, i) => {
+              const Icon = principleIcons[i];
+
+              return (
+                <div
+                  key={w.title}
+                  className="group relative overflow-hidden border border-line bg-background p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-lg"
+                >
+                  <div
+                    aria-hidden="true"
+                    className="absolute -right-8 -bottom-8 size-24 rounded-full bg-accent/5 transition-transform duration-500 group-hover:scale-150"
+                  />
+                  <div className="relative">
+                    <div className="flex size-10 items-center justify-center border border-accent/25 bg-accent/10 text-accent transition-all duration-300 group-hover:border-accent/50 group-hover:bg-accent group-hover:text-accent-foreground">
+                      <Icon
+                        className="size-4.5 transition-transform duration-300 group-hover:scale-110"
+                        strokeWidth={1.8}
+                      />
+                    </div>
+                    <h3 className="mt-6 text-lg font-semibold tracking-tight">{w.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{w.text}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -263,7 +360,7 @@ function About() {
       <CtaBand
         title="Have a project in mind?"
         text="Tell us what you are planning and we will let you know what the works would involve."
-        whatsappMessage="Hello Turitrend, I would like to discuss a construction project."
+        whatsappMessage="Hello Turiend, I would like to discuss a construction project."
         context="about"
       />
     </>

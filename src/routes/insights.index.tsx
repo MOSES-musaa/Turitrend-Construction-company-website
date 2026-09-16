@@ -30,7 +30,7 @@ function InsightsPage() {
   intro={
     <>
       Practical ideas, project knowledge and perspectives
-      from Turitrend Construction Limited.
+      from Turiend Construction Limited.
     </>
   }
 />

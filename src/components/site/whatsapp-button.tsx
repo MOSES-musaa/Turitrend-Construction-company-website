@@ -42,7 +42,7 @@ export function WhatsAppFloat({ message }: { message: string }) {
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => track("whatsapp_click", { context: "floating_button" })}
-      aria-label="Chat with Turitrend Construction on WhatsApp"
+      aria-label="Chat with Turiend Construction on WhatsApp"
       className={cn(
         "fixed right-4 bottom-20 z-40 flex size-13 items-center justify-center rounded-full bg-ink text-ink-foreground shadow-lg shadow-ink/25 transition-transform hover:scale-105 md:bottom-6 md:size-14",
       )}

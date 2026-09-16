@@ -14,19 +14,19 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       {
-        title: "Contact Turitrend Construction Limited | Nairobi, Kenya",
+        title: "Contact Turiend Construction Limited | Nairobi, Kenya",
       },
       {
         name: "description",
-        content: `Contact Turitrend Construction Limited — call ${company.phone}, message on WhatsApp, or email ${company.email}. Based in Nairobi, Kenya.`,
+        content: `Contact Turiend Construction Limited — call ${company.phone}, message on WhatsApp, or email ${company.email}. Based in Nairobi, Kenya.`,
       },
       {
         property: "og:title",
-        content: "Contact Turitrend Construction Limited",
+        content: "Contact Turiend Construction Limited",
       },
       {
         property: "og:description",
-        content: "Phone, WhatsApp and email contact details for Turitrend Construction Limited.",
+        content: "Phone, WhatsApp and email contact details for Turiend Construction Limited.",
       },
     ],
   }),
@@ -82,7 +82,7 @@ function Contact() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Talk to Turitrend Construction Limited."
+        title="Talk to Turiend Construction Limited."
         intro="Call, message on WhatsApp or send the details of your project. We respond during working hours."
       />
 
@@ -152,7 +152,7 @@ function Contact() {
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <WhatsAppCta
-              message="Hello Turitrend, I would like to discuss a construction project."
+              message="Hello Turiend, I would like to discuss a construction project."
               variant="ink"
               context="contact_page"
             />
@@ -173,13 +173,13 @@ function Contact() {
               <h3 className="display-3 mt-4">Thank you, we have received your message.</h3>
 
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-                Your enquiry has been sent to the Turitrend team. We will review the details and get
+                Your enquiry has been sent to the Turiend team. We will review the details and get
                 back to you during working hours.
               </p>
 
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <WhatsAppCta
-                  message="Hello Turitrend, I just sent a message through your website and would like to follow up."
+                  message="Hello Turiend, I just sent a message through your website and would like to follow up."
                   variant="ink"
                   context="contact_confirmation"
                 />
