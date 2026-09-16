@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo1.png";
 import { company, services } from "@/lib/company";
 import { track } from "@/lib/analytics";
 import { navItems } from "@/lib/navigation";
