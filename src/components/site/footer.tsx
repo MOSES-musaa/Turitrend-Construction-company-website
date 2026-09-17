@@ -8,7 +8,7 @@ import { navItems } from "@/lib/navigation";
 export function SiteFooter() {
   return (
     <footer className="mt-px bg-ink text-ink-foreground">
-      <div className="container-x grid gap-12 py-16 md:grid-cols-12 md:py-20">
+      <div className="container-x grid gap-12 py-14 md:grid-cols-12 md:py-16">
         <div className="md:col-span-4">
           <img
             src={logo}
@@ -16,7 +16,7 @@ export function SiteFooter() {
             width={220}
             height={64}
             loading="lazy"
-            className="h-11 w-auto bg-ink-foreground px-2 py-1"
+            className="h-12 w-auto rounded-sm border border-primary/30 bg-secondary px-3 py-2 shadow-[0_8px_24px_rgb(0_0_0_/_14%)]"
           />
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-ink-muted">
             {company.name} is a Kenyan construction company covering building works, renovations,

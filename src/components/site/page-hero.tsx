@@ -40,7 +40,7 @@ export function PageHero({
         aria-hidden="true"
       />
 
-      <div className="container-x relative pt-16 pb-16 md:pt-24 md:pb-24">
+      <div className="container-x relative pt-14 pb-14 md:pt-20 md:pb-20">
         {/* Eyebrow */}
         <Reveal delay={0}>
           <p className="label-tech flex items-center gap-3 text-ink-muted">
