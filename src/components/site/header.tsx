@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import logo from "@/assets/logo1.png";
 import { cn } from "@/lib/utils";
 import { CtaLink } from "./cta";
-import { navItems } from "@/lib/navigation";
+import { navItems, quoteNavItem } from "@/lib/navigation";
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const QuoteIcon = quoteNavItem.icon;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -90,17 +91,26 @@ export function SiteHeader() {
           className="absolute left-0 right-0 top-full z-50 max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-line bg-background shadow-lg lg:hidden"
         >
           <nav aria-label="Mobile" className="container-x flex flex-col py-2">
-            {navItems.map((item, i) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                onClick={() => setOpen(false)}
-                className="flex items-baseline border-b border-line py-5 text-2xl font-semibold tracking-tight [&.active]:text-accent"
-                activeOptions={{ exact: item.to === "/" }}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={() => setOpen(false)}
+                  className="group flex items-center gap-4 border-b border-line py-5 text-2xl font-semibold tracking-tight transition-colors hover:text-accent [&.active]:text-accent"
+                  activeOptions={{ exact: item.to === "/" }}
+                >
+                  <Icon
+                    className="size-5 shrink-0 text-foreground/45 transition-colors group-hover:text-accent group-[.active]:text-accent"
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                  <span>{item.label}</span>
+                </Link>
+              );
+            })}
             <CtaLink
               to="/quote"
               variant="accent"
@@ -108,7 +118,8 @@ export function SiteHeader() {
               className="mt-6 mb-28"
               onClick={() => setOpen(false)}
             >
-              Request a Quote
+              <QuoteIcon className="size-5" strokeWidth={1.8} aria-hidden="true" />
+              {quoteNavItem.label}
             </CtaLink>
           </nav>
         </div>

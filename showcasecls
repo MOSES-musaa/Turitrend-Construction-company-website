@@ -1,0 +1,29 @@
+[1mdiff --git a/public/images/projects/building/building-project-4/img6.jpeg b/public/images/projects/building/building-project-4/img6.jpeg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..00eb864[m
+Binary files /dev/null and b/public/images/projects/building/building-project-4/img6.jpeg differ
+[1mdiff --git a/src/lib/project-image.ts b/src/lib/project-image.ts[m
+[1mindex 504081b..9e9910f 100644[m
+[1m--- a/src/lib/project-image.ts[m
+[1m+++ b/src/lib/project-image.ts[m
+[36m@@ -96,6 +96,7 @@[m [mexport const projectImages: Record<string, ProjectImage[]> = {[m
+     "img3.jpeg",[m
+     "img4.jpeg",[m
+     "img5.jpeg",[m
+[32m+[m[32m    "img6.jpeg",[m
+   ][m
+ ),[m
+ "building-project-5": createImages([m
+[1mdiff --git a/src/routes/projects.index.tsx b/src/routes/projects.index.tsx[m
+[1mindex ff243c3..2166918 100644[m
+[1m--- a/src/routes/projects.index.tsx[m
+[1m+++ b/src/routes/projects.index.tsx[m
+[36m@@ -38,7 +38,7 @@[m [mfunction Projects() {[m
+       <PageHero[m
+         eyebrow="Projects"[m
+         title="Project showcases are being documented."[m
+[31m-        intro="Rather than fill this page with images that are not ours, we are preparing proper documentation and photography of completed Turiend works. It will be published here as it is ready."[m
+[32m+[m[32m        intro="Explore a selection of our completed and ongoing projects, showcasing Turiend Construction Limited’s commitment to quality craftsmanship, thoughtful execution, and reliable construction solutions. From residential developments to commercial works, every project reflects our focus on delivering lasting value from concept to completion."[m
+       />[m
+ [m
+       <section className="container-x section-y">[m
