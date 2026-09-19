@@ -38,7 +38,7 @@ function Projects() {
       <PageHero
         eyebrow="Projects"
         title="Project showcases are being documented."
-        intro="Rather than fill this page with images that are not ours, we are preparing proper documentation and photography of completed Turiend works. It will be published here as it is ready."
+        intro="Explore a selection of our completed and ongoing projects, showcasing Turiend Construction Limited’s commitment to quality craftsmanship, thoughtful execution, and reliable construction solutions. From residential developments to commercial works, every project reflects our focus on delivering lasting value from concept to completion."
       />
 
       <section className="container-x section-y">

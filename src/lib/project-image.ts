@@ -96,6 +96,7 @@ export const projectImages: Record<string, ProjectImage[]> = {
     "img3.jpeg",
     "img4.jpeg",
     "img5.jpeg",
+    "img6.jpeg",
   ]
 ),
 "building-project-5": createImages(
