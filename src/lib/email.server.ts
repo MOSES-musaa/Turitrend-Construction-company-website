@@ -81,6 +81,7 @@ export async function sendEnquiryEmail(enquiry: Enquiry) {
   const { data, error } = await resend.emails.send({
     from,
     to: [to],
+    ...(enquiry.email ? { replyTo: enquiry.email } : {}),
     subject: enquirySubject(enquiry),
     html: enquiryHtml(enquiry),
   });
