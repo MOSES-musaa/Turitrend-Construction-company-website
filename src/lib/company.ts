@@ -11,8 +11,8 @@ export const company = {
   phone: "+254 727 233 041",
   phoneHref: "tel:+254727233041",
   whatsappNumber: "254727233041",
-  email: "turiendconstruction@gmail.com",
-  emailHref: "mailto:turiendconstruction@gmail.com",
+  email: "info@turiendconstruction.co.ke",
+  emailHref: "mailto:info@turiendconstruction.co.ke",
   location: "Nairobi, Kenya",
   postal: "P.O. Box 317 – 10106, Othaya",
 } as const;

@@ -16,6 +16,7 @@ import { SiteFooter } from "@/components/site/footer";
 import { MobileActionBar } from "@/components/site/mobile-action-bar";
 import { WhatsAppFloat } from "@/components/site/whatsapp-button";
 import { company, defaultWhatsappMessage } from "@/lib/company";
+import favicon from "@/assets/favicon2.jpeg";
 
 function NotFoundComponent() {
   return (
@@ -100,7 +101,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/png", href: "/favicon.png" },
+      { rel: "icon", type: "image/jpeg", href: favicon },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

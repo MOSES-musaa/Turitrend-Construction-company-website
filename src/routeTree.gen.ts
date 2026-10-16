@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FaqsRouteImport } from './routes/faqs'
 import { Route as HowWeWorkRouteImport } from './routes/how-we-work'
 import { Route as InsightsRouteImport } from './routes/insights'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as QuoteRouteImport } from './routes/quote'
 import { Route as InsightsIndexRouteImport } from './routes/insights.index'
@@ -52,6 +53,11 @@ const HowWeWorkRoute = HowWeWorkRouteImport.update({
 const InsightsRoute = InsightsRouteImport.update({
   id: '/insights',
   path: '/insights',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsRoute = ProjectsRouteImport.update({
@@ -102,6 +108,7 @@ export interface FileRoutesByFullPath {
   '/faqs': typeof FaqsRoute
   '/how-we-work': typeof HowWeWorkRoute
   '/insights': typeof InsightsRouteWithChildren
+  '/privacy': typeof PrivacyRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/quote': typeof QuoteRoute
   '/insights/$slug': typeof InsightsSlugRoute
@@ -117,6 +124,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/faqs': typeof FaqsRoute
   '/how-we-work': typeof HowWeWorkRoute
+  '/privacy': typeof PrivacyRoute
   '/quote': typeof QuoteRoute
   '/insights/$slug': typeof InsightsSlugRoute
   '/projects/$slug': typeof ProjectsSlugRoute
@@ -133,6 +141,7 @@ export interface FileRoutesById {
   '/faqs': typeof FaqsRoute
   '/how-we-work': typeof HowWeWorkRoute
   '/insights': typeof InsightsRouteWithChildren
+  '/privacy': typeof PrivacyRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/quote': typeof QuoteRoute
   '/insights/$slug': typeof InsightsSlugRoute
@@ -151,6 +160,7 @@ export interface FileRouteTypes {
     | '/faqs'
     | '/how-we-work'
     | '/insights'
+    | '/privacy'
     | '/projects'
     | '/quote'
     | '/insights/$slug'
@@ -166,6 +176,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faqs'
     | '/how-we-work'
+    | '/privacy'
     | '/quote'
     | '/insights/$slug'
     | '/projects/$slug'
@@ -181,6 +192,7 @@ export interface FileRouteTypes {
     | '/faqs'
     | '/how-we-work'
     | '/insights'
+    | '/privacy'
     | '/projects'
     | '/quote'
     | '/insights/$slug'
@@ -198,6 +210,7 @@ export interface RootRouteChildren {
   FaqsRoute: typeof FaqsRoute
   HowWeWorkRoute: typeof HowWeWorkRoute
   InsightsRoute: typeof InsightsRouteWithChildren
+  PrivacyRoute: typeof PrivacyRoute
   ProjectsRoute: typeof ProjectsRouteWithChildren
   QuoteRoute: typeof QuoteRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
@@ -246,6 +259,13 @@ declare module '@tanstack/react-router' {
       path: '/insights'
       fullPath: '/insights'
       preLoaderRoute: typeof InsightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects': {
@@ -342,6 +362,7 @@ const rootRouteChildren: RootRouteChildren = {
   FaqsRoute: FaqsRoute,
   HowWeWorkRoute: HowWeWorkRoute,
   InsightsRoute: InsightsRouteWithChildren,
+  PrivacyRoute: PrivacyRoute,
   ProjectsRoute: ProjectsRouteWithChildren,
   QuoteRoute: QuoteRoute,
   ServicesSlugRoute: ServicesSlugRoute,

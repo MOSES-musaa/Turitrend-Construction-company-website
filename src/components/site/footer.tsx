@@ -91,11 +91,16 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-ink-line">
-        <div className="container-x flex flex-col gap-2 py-6 text-xs text-ink-muted sm:flex-row sm:items-center sm:justify-between">
+        <div className="container-x flex flex-col gap-3 py-6 text-xs text-ink-muted sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} {company.name}. All rights reserved.
           </p>
-          <p className="label-tech">{company.tagline}</p>
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+            <Link to="/privacy" className="transition-colors hover:text-accent">
+              Privacy Policy
+            </Link>
+            <p className="label-tech">{company.tagline}</p>
+          </div>
         </div>
       </div>
     </footer>
