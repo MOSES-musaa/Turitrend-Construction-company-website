@@ -495,7 +495,7 @@ function HeroCarousel() {
       ))}
 
       {/* Slide information + controls */}
-      <div className="absolute inset-x-0 bottom-0 z-10">
+      <div className="absolute inset-x-0 bottom-0 z-10 hidden md:block">
         <div className="container-x pb-6 md:pb-8">
           <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
             
